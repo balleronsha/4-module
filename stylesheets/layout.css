@@ -1,0 +1,39 @@
+.burger-nav {
+  position: relative;
+}
+
+.burger-button {
+  position: fixed;
+  right: 2vw;
+  top: 2vw;
+  width: 4vw;
+  height: 4vw;
+  background-color: rgb(92, 211, 81);
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ef97d3;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vw;
+  gap: 1vw;
+  z-index: 999;
+  border-top-left-radius: 3vw;
+  border-top-right-radius: 3vw;
+}
+
+.menu a {
+  color: rgb(0, 0, 0);
+  font-size: 2vw;
+}
+
+.menu.show {
+  display: flex;
+}

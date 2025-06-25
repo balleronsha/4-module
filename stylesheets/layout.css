@@ -271,13 +271,24 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
 }
 .zagl1 {
-  font-weight: bold;
-  font-size: 4.392vw;
-  left: 56.735vw;
-  top: 24.817vw;
-  color: #000;
   position: absolute;
+  left: 65.735vw;
+  top: 29.817vw;
+  width: 30vw; /* ограничим ширину */
+  height: auto;
+  overflow: visible;
 }
+
+.zagl1 text {
+  font-weight: bold;
+  fill: #ffffff;
+  stroke: #ff2c73;
+  stroke-width: 0.6vw; /* немного меньше, чтобы не "распухал" */
+  paint-order: stroke;
+  font-size: 2.8vw; /* меньше — меньше вылезает */
+  overflow: visible;
+}
+
 .txt1 {
   font-size: 1.464vw;
   left: 56.955vw;
@@ -544,7 +555,7 @@ body::-webkit-scrollbar-thumb {
 .dengi2,
 .dengi3,
 .dengi4 {
-  font-size: 4.392vw;
+  font-size: 3.66vw;
   color: #000;
   position: absolute;
   font-weight: 300;

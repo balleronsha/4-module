@@ -1,6 +1,128 @@
+@media screen and (max-device-width: 800px) {
+  .burger-nav {
+    width: 100vw;
+    height: 16vw;
+  }
+  .menubtn1 {
+    width: 15vw;
+    height: 15vw;
+    top: -0.5vw;
+    right: 1.5vw;
+  }
+  .icon-left,
+  .icon-right {
+    width: 0.782vw;
+    height: 9vw;
+  }
+  .icon-left {
+    transform: translateY(-0.3vw);
+  }
+  .icon-right {
+    transform: translateY(0.3vw);
+  }
+  .menubtn1.active .icon-left {
+    transform: rotate(45deg);
+  }
+  .menubtn1.active .icon-right {
+    transform: rotate(-45deg);
+  }
+  .menu {
+    position: fixed;
+    top: 5vw;
+    padding-top: 3vw;
+    width: 100vw;
+    height: 100vw;
+    background-color: #9ce158;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    gap: 1vw;
+  }
+  .menu.show {
+    display: flex;
+  }
+  .menu a {
+    color: #000;
+    font-size: 4vw;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0.1vw;
+
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .glav-svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  .glav-svg text {
+    justify-content: center;
+    font-weight: bold;
+    font-size: 15vw;
+    fill: #ffffff;
+    stroke: #1c1c1c;
+    stroke-width: 6vw;
+    paint-order: stroke;
+  }
+  .menu-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 3vw; /* расстояние между кнопками */
+    margin-top: 4vw; /* отступ сверху от последних ссылок */
+    width: 100%;
+  }
+
+  .menu-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    background-color: #fff;
+    border: 0.3vw solid #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    user-select: none;
+    white-space: nowrap;
+    font-weight: 500 !important;
+    font-size: 1.83vw !important;
+    padding: 1.5vw 4vw !important;
+    color: #000 !important;
+  }
+
+  .logo {
+    font-size: 11.392vw;
+    top: 2.3vw;
+    left: 1.8vw;
+    letter-spacing: -5.15vw;
+  }
+  .logo span {
+    display: inline-block; /* чтобы можно было анимировать */
+    transition: transform 0.3s ease;
+    letter-spacing: -0.05vw;
+  }
+}
+/* 
+ */
+/*  */ /* 
+ */
+/*  */ /* 
+ */
+/*  */ /* 
+ */
+/*  */ /* 
+ */
+/*  */ /* 
+ */
+/*  */ /* 
+ */
+/*  */
 @media screen and (max-width: 800px) {
   .burger-nav {
     width: 100vw;
     height: 16vw;
+    background-color: brown;
   }
 }

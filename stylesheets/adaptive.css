@@ -1,68 +1,69 @@
 @media screen and (max-device-width: 800px) {
+  body {
+    cursor: default;
+    overflow-x: hidden;
+    position: relative;
+  }
   .burger-nav {
     width: 100vw;
-    height: 16vw;
+    height: 20vw;
   }
   .menubtn1 {
-    width: 15vw;
-    height: 15vw;
-    top: -0.5vw;
-    right: 1.5vw;
+    width: 10vw;
+    height: 10vw;
+    top: 5vw;
+    right: 1vw;
   }
+
   .icon-left,
   .icon-right {
-    width: 0.782vw;
-    height: 9vw;
+    width: 8vw;
+    height: 1vw;
   }
+
   .icon-left {
-    transform: translateY(-0.3vw);
+    transform: translateY(-2vw);
   }
+
   .icon-right {
-    transform: translateY(0.3vw);
+    transform: translateY(2vw);
   }
+
   .menubtn1.active .icon-left {
     transform: rotate(45deg);
   }
+
   .menubtn1.active .icon-right {
     transform: rotate(-45deg);
   }
+
   .menu {
-    position: fixed;
-    top: 5vw;
-    padding-top: 3vw;
+    top: 19vw;
     width: 100vw;
-    height: 100vw;
-    background-color: #9ce158;
-    display: none;
+    height: 146vw;
     flex-direction: column;
-    align-items: center;
     z-index: 1000;
-    gap: 1vw;
+    gap: 19vw;
   }
   .menu.show {
     display: flex;
   }
   .menu a {
-    color: #000;
     font-size: 4vw;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 0.1vw;
-
-    transition: transform 0.3s ease, color 0.3s ease;
   }
   .glav-svg {
+    left: 0vw;
     width: 100%;
     height: auto;
     overflow: visible;
+    position: absolute;
   }
 
   .glav-svg text {
     justify-content: center;
     font-weight: bold;
-    font-size: 15vw;
-    fill: #ffffff;
-    stroke: #1c1c1c;
+    font-size: 13vw;
+
     stroke-width: 6vw;
     paint-order: stroke;
   }
@@ -75,17 +76,10 @@
   }
 
   .menu-btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     color: #000;
     background-color: #fff;
     border: 0.3vw solid #000;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    user-select: none;
-    white-space: nowrap;
+
     font-weight: 500 !important;
     font-size: 1.83vw !important;
     padding: 1.5vw 4vw !important;
@@ -93,15 +87,17 @@
   }
 
   .logo {
-    font-size: 11.392vw;
-    top: 2.3vw;
+    font-size: 12.5vw;
+    top: 4.3vw;
     left: 1.8vw;
-    letter-spacing: -5.15vw;
+    letter-spacing: -4.15vw;
   }
-  .logo span {
-    display: inline-block; /* чтобы можно было анимировать */
-    transition: transform 0.3s ease;
-    letter-spacing: -0.05vw;
+  .ascii-art {
+    rotate: -90deg;
+    line-height: 0.95vw;
+    letter-spacing: 0.15vw;
+    top: 36vw;
+    left: -1vw;
   }
 }
 /* 

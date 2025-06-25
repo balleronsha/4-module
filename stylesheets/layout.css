@@ -23,6 +23,15 @@ body {
 body::-webkit-scrollbar-thumb {
   border: 0.15vw solid #000000;
 } */
+/* .menu800,
+.menu.show,
+.menu800 a,
+.glav-svg800,
+.glav-svg800 text,
+.menu-buttons,
+.menu-btn {
+  display: none;
+} */
 .burger-nav {
   position: fixed;
   width: 100vw;
@@ -55,6 +64,7 @@ body::-webkit-scrollbar-thumb {
 
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
+
 .icon-left {
   transform: translateY(-0.6vw);
 }
@@ -78,7 +88,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   align-items: center;
   z-index: 1000;
-  gap: 1vw;
+  gap: 2vw;
 }
 .menu.show {
   display: flex;
@@ -91,6 +101,11 @@ body::-webkit-scrollbar-thumb {
   margin: 0.1vw;
 
   transition: transform 0.3s ease, color 0.3s ease;
+}
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .glav-svg {
   width: 100%;

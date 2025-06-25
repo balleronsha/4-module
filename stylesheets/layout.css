@@ -272,8 +272,8 @@ body::-webkit-scrollbar-thumb {
 }
 .zagl1 {
   position: absolute;
-  left: 65.735vw;
-  top: 29.817vw;
+  left: 67.5vw;
+  top: 30.817vw;
   width: 30vw; /* ограничим ширину */
   height: auto;
   overflow: visible;

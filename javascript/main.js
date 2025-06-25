@@ -32,11 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     bug.style.top = Math.random() * 100 + '%';
     bug.style.left = Math.random() * 100 + '%';
 
-    // Длительность анимации от 7 до 8 секунд — чуть медленнее и плавнее
     const duration = 7 + Math.random();
     bug.style.animationDuration = `${duration}s`;
 
-    // Задержка старта от 0 до 8 секунд для разброса по времени
     bug.style.animationDelay = `${Math.random() * 8}s`;
 
     const animationName = `moveBug${i}`;
@@ -74,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const asciiArt = document.querySelector('.ascii-art');
   const spans = asciiArt.querySelectorAll('span');
 
-  // Создаем кастомный курсор
   const cursor = document.createElement('div');
   cursor.classList.add('ascii-art-cursor');
   asciiArt.appendChild(cursor);
@@ -87,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cursor.style.left = `${x}px`;
     cursor.style.top = `${y}px`;
 
-    // Окрашиваем спаны вокруг курсора
     spans.forEach((span) => {
       const spanRect = span.getBoundingClientRect();
       const spanX = spanRect.left + spanRect.width / 2;
@@ -183,8 +179,8 @@ const layers = [
 // Глитчик для текста соооочныыый
 document.addEventListener('DOMContentLoaded', () => {
   const chars = ' bugs dance bugs dance ';
-  const glitchDuration = 500; // общее время в миллисекундах
-  const interval = 30; // задержка между кадрами
+  const glitchDuration = 500;
+  const interval = 30;
 
   const glitchElements = document.querySelectorAll(
     '.plus1, .plus2, .plus3, .plus4, .stoimost1, .stoimost2, .stoimost3, .stoimost4, .sumkawhat, .sumkaprice, .koverwhat, .koverprice,.brasletwhat, .brasletprice, .tshirtwhat, .tshirtprice, .sockswhat, .socksprice, .znachwhat, .znachprice, .plastinkawhat , .plastinkaprice'
@@ -272,46 +268,30 @@ document.addEventListener('DOMContentLoaded', () => {
   bug.classList.add('fast-bug');
   container.appendChild(bug);
 
-  const duration = 1500; // длительность анимации (мс)
+  const duration = 1500;
 
-  // Параметры волны
   const amplitude = 40;
-  const frequency = 2 * Math.PI * 2; // 2 волны
-
-  // Функции позиции по времени t от 0 до 1
+  const frequency = 2 * Math.PI * 2;
   function getX(t, startX, endX) {
     return startX + (endX - startX) * t;
   }
-
   function getY(t, height) {
     return height / 2 + amplitude * Math.sin(frequency * t);
   }
-
-  // Вычисление производной по времени для наклона
   function getDYDT(t) {
     return amplitude * frequency * Math.cos(frequency * t);
   }
-
   function animateBug(timestampStart) {
     const startX = -bug.offsetWidth || -100;
     const endX = container.offsetWidth + (bug.offsetWidth || 100);
-
     function step(timestamp) {
       if (!timestampStart) timestampStart = timestamp;
       const elapsed = timestamp - timestampStart;
       const t = Math.min(elapsed / duration, 1);
-
-      // Позиция
       const x = getX(t, startX, endX);
       const y = getY(t, container.offsetHeight);
-
-      // Производные (dx/dt всегда положительный, так как движение слева направо)
       const dxdt = endX - startX;
-      const dydt = getDYDT(t) * duration; // умножаем на duration, т.к. t - нормализация по времени
-
-      // Угол поворота в радианах и потом в градусах
-      // Math.atan2(y, x) — угол между вектором (x,y) и осью X
-      // Здесь вектор скорости: (dxdt, dydt)
+      const dydt = getDYDT(t) * duration;
       const angleRad = Math.atan2(dydt, dxdt);
       const angleDeg = angleRad * (180 / Math.PI);
 
@@ -487,7 +467,7 @@ document.addEventListener('mousemove', (e) => {
   const normalizedX = (e.clientX / window.innerWidth - 0.5) * 2;
   const normalizedY = (e.clientY / window.innerHeight - 0.5) * -2;
 
-  targetX = normalizedX * 20; // Увеличиваем силу поворота (ранее было *15)
+  targetX = normalizedX * 20;
   targetY = normalizedY * 20;
 });
 

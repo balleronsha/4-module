@@ -149,24 +149,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const skuchno = document.getElementById(skuchnoIds[index]);
 
     if (!block || !xoxoImg || !skuchno) return;
-
-    // Клик по блоку
     block.addEventListener('click', () => {
       skuchno.style.display = 'block';
 
       const src = xoxoImg.getAttribute('src');
-
-      // Получаем имя файла без расширения и пути
       const filename = src.split('/').pop().replace('.svg', '');
-
-      // Добавляем Pink, если ещё не pink
       if (!filename.toLowerCase().includes('pink')) {
         const pinkSrc = `images/${filename}pink.svg`;
         xoxoImg.setAttribute('src', pinkSrc);
       }
     });
-
-    // Закрытие окна
     const closeBtn = skuchno.querySelector('.flow');
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
@@ -199,7 +191,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = document.getElementById(images[index]);
     if (trigger && modalToOpen && img) {
       trigger.addEventListener('click', () => {
-        // Закрываем все окна и возвращаем изображения в исходное состояние
         modals.forEach((modalId, i) => {
           const modal = document.getElementById(modalId);
           const image = document.getElementById(images[i]);
@@ -209,10 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             image.src = image.src.replace(/pink\.svg$/, '.svg');
           }
         });
-
-        // Открываем нужное окно и меняем картинку на pink-версию
         modalToOpen.style.display = 'flex';
-        // Меняем src на pink-версию (например, pilates.svg -> pilatespink.svg)
         img.src = img.src.replace(/\.svg$/, 'pink.svg');
       });
     }
@@ -224,12 +212,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const parentModal = btn.closest('[id^="skuchno"]');
       if (parentModal) {
         parentModal.style.display = 'none';
-        // Найдём индекс закрываемого модала
         const index = modals.indexOf(parentModal.id);
         if (index !== -1) {
           const image = document.getElementById(images[index]);
           if (image) {
-            // Возвращаем исходный src без pink
             image.src = image.src.replace(/pink\.svg$/, '.svg');
           }
         }
@@ -268,8 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
     bubble.textContent = randomPhrase;
     bubble.style.opacity = 1;
-
-    // Скрываем через 3 секунды
     setTimeout(() => {
       bubble.style.opacity = 0;
     }, 2500);

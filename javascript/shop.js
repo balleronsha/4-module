@@ -18,8 +18,6 @@ function toggleMenu() {
 //
 document.addEventListener('DOMContentLoaded', () => {
   const footer = document.querySelector('.footershop');
-
-  // Сопоставление товаров и карточек
   const pairs = [
     { triggerId: 'meshok', cardId: 'card-meshok' },
     { triggerId: 'yoga', cardId: 'card-yoga' },
@@ -43,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-// 💗 Функция закрытия карточки (добавили обратно, чтобы HTML onclick работал)
 function closeCard(id) {
   const card = document.getElementById(id);
   const footer = document.querySelector('.footershop');
@@ -132,16 +128,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const bubikZel = document.querySelector('.bubikzel1');
 
   if (sumkaImage && bubikRoz && bubikZel) {
-    // При нажатии на розовый бубик
     bubikRoz.addEventListener('click', () => {
-      sumkaImage.src = 'images/sumka-pink.png'; // Поменяй на своё розовое изображение
+      sumkaImage.src = 'images/sumka-pink.png';
       bubikRoz.style.border = '0.2vw solid #000';
       bubikZel.style.border = 'none';
     });
-
-    // При нажатии на зелёный бубик
     bubikZel.addEventListener('click', () => {
-      sumkaImage.src = 'images/sumka.png'; // Исходная зелёная
+      sumkaImage.src = 'images/sumka.png';
       bubikZel.style.border = '0.2vw solid #000';
       bubikRoz.style.border = 'none';
     });
@@ -172,24 +165,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     bubikRoz.addEventListener('click', () => {
-      koverImage.src = 'images/kover-pink.png'; // Твой розовый коврик
+      koverImage.src = 'images/kover-pink.png';
       clearBorders();
       bubikRoz.style.border = '0.2vw solid #000';
     });
 
     bubikZel.addEventListener('click', () => {
-      koverImage.src = 'images/kover.png'; // Исходный зелёный коврик
+      koverImage.src = 'images/kover.png';
       clearBorders();
       bubikZel.style.border = '0.2vw solid #000';
     });
 
     bubikBel.addEventListener('click', () => {
-      koverImage.src = 'images/kover-white.png'; // Белый коврик
+      koverImage.src = 'images/kover-white.png';
       clearBorders();
       bubikBel.style.border = '0.2vw solid #000';
     });
-
-    // Начальная инициализация — зелёный выбран
     bubikZel.click();
   }
 });
@@ -214,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     bubble.textContent = randomPhrase;
     bubble.style.opacity = 1;
 
-    // Скрываем через 3 секунды
     setTimeout(() => {
       bubble.style.opacity = 0;
     }, 2500);

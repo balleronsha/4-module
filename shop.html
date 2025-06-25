@@ -4,21 +4,335 @@
     <meta charset="UTF-8" />
     <title>Магазин</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+      <link rel="icon" href="images/shoooooooopps.png" />
   </head>
   <body>
+    <!-- бургер -->
     <nav class="burger-nav">
-      <div class="burger-button" onclick="toggleMenu()"></div>
+      <div class="burger-wrapper">
+        <div class="menubtn1" data-menu="1">
+          <div class="icon-left"></div>
+          <div class="icon-right"></div>
+        </div>
+        <a class="logo" href="#">
+          <span>B</span>
+          <span>U</span>
+          <span>G</span>
+          <span>S</span>
+          <span> &nbsp</span>
+          <span>D</span>
+          <span>A</span>
+          <span>N</span>
+          <span>C</span>
+          <span>E</span>
+        </a>
+      </div>
       <div class="menu" id="menu">
+        <a href="index.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              ГЛАВНАЯ
+            </text>
+          </svg></a
+        >
+        <a href="styles.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              НАПРАВЛЕНИЯ
+            </text>
+          </svg></a
+        >
+        <a href="shop.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              МАГАЗИН
+            </text>
+          </svg></a
+        >
+        <a href="events.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              СОБЫТИЯ
+            </text>
+          </svg></a
+        >
+        <a href="team.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              КОМАНДА
+            </text>
+          </svg></a
+        >
+        <a href="filials.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              ФИЛИАЛЫ
+            </text>
+          </svg></a
+        >
+        <div class="menu-buttons">
+          <a
+            href="https://balleronsha.github.io/excursion-bugs-dance/"
+            target="_blank"
+            class="menu-btn"
+            >ТА САМАЯ ИГРА</a
+          >
+          <a href="https://t.me/bugsdance" target="_blank" class="menu-btn"
+            >НАШ ТЕЛЕГРАМ</a
+          >
+        </div>
+      </div>
+    </nav>
+    <script src="javascript/shop.js"></script>
+
+    <div id="meshok">
+      <img id="sumka" src="images/sumka.png" alt="" />
+      <p class="sumkawhat">Мешок для одежды/обуви</p>
+      <p class="sumkaprice">2500 ₽</p>
+    </div>
+    <div id="yoga">
+      <img id="kover" src="images/kover.png" alt="" />
+      <p class="koverwhat">Коврик для йоги</p>
+      <p class="koverprice">5000 ₽</p>
+    </div>
+    <div id="fest">
+      <img id="braslet" src="images/braslet.png" alt="" />
+      <p class="brasletwhat">Браслетики</p>
+      <p class="brasletprice">900 ₽</p>
+    </div>
+    <div id="like">
+      <img id="tshirt" src="images/tshirt.png" alt="" />
+      <p class="tshirtwhat">Футболка</p>
+      <p class="tshirtprice">3000 ₽</p>
+    </div>
+  </body>
+  <div id="noski">
+    <img id="socks" src="images/noski.png" alt="" />
+     <p class="sockswhat">Носочки</p>
+      <p class="socksprice">1000 ₽</p>
+  </div> 
+  <div id="zluka">
+    <img id="znach" src="images/z.png" alt="" />
+      <p class="znachwhat">Значки</p>
+      <p class="znachprice">350 ₽</p>
+  </div>
+    </div>
+   <div id="musicaaaa">
+    <img id="plastinka" src="images/plastinka.png" alt="" />
+      <p class="plastinkawhat">Виниловая пластинка</p>
+      <p class="plastinkaprice">2000 ₽</p>
+  </div>
+  <!--  -->
+  <!--  -->
+  <!--  -->
+  <!--  -->
+  <!--  -->
+  <!-- Карточка мешка я ненавижу код, очень сильно хочется спать и на море((((((( -->
+<div id="card-meshok" >
+  <div class="card-content">
+    <div class="photo1">   <img id="sumka-card" src="images/sumka.png" alt="" /></div>
+    <div class="textix">    <span class="back-btn" onclick="closeCard('card-meshok')">назад</span>
+    <p class="hrupko1">Мешок для одежды и обуви</p>
+   <p class="pupok1">Прочный и вместительный мешок для <br> хранения обуви или одежды. Идеален для <br> спортивных тренировок или путешествий. <br> Хорошо стирается и быстро сохнет.</p>
+  <div class="bubikroz1"></div>
+   <div class="bubikzel1"></div>
+   <img class="icon1" src="images/icon1.svg" alt="">
+  <img class="icon2" src="images/icon2.svg" alt="">
+   <img class="icon3" src="images/icon3.svg" alt="">
+   <p class="luda">100% хлопок</p>
+   <p class="nam"> цвет устойчив к стирке</p>
+   <p class="p0000000000z">40x30 см</p>
+   <p class="labubu">2500 ₽</p>
+   <div class="diksidlylohov"> добавить в корзину</div>
+  </div>
+  </div>
+</div>
+<!--  -->
+<div id="card-yoga" >
+    <div class="card-content">
+    <div class="photo2">   <img id="kover-card" src="images/kover.png" alt="" /></div>
+    <div class="textix">    <span class="back-btn" onclick="closeCard('card-yoga')">назад</span>
+    <p class="hrupko1">Коврик для йоги</p>
+   <p class="pupok1">Антискользящий коврик для йоги, удобный <br> для всех типов тренировок. Мягкая <br> поверхность для комфортных занятий. Легкий  <br>и компактный, легко моется. <br> Хорошо стирается и быстро сохнет.</p>
+  <div class="bubikroz2"></div>
+   <div class="bubikzel2"></div>
+     <div class="bubikbel2"></div>
+   <img class="icon4" src="images/icon4.svg" alt="">
+  <img class="icon5" src="images/icon5.svg" alt="">
+   <img class="icon3-2" src="images/icon3.svg" alt="">
+   <p class="titan">биоразлагаемый материал</p>
+   <p class="nammir"> сделано в России</p>
+   <p class="nervamzhop">180x60 см.</p>
+   <p class="labubu">5000 ₽</p>
+   <div class="diksidlylohov"> добавить в корзину</div>
+  </div>
+  </div>
+</div>
+<!--  -->
+<div id="card-fest">
+ <div class="card-content">
+    <div class="photo3">   <img id="braslet-card" src="images/braslet.png" alt="" /></div>
+    <div class="textix">    <span class="back-btn" onclick="closeCard('card-fest')">назад</span>
+    <p class="hrupko1">Браслетики </p>
+   <p class="pupok1">Яркие и удобные браслетики из силикона. <br> Мягкие на ощупь, отлично подходят <br> для повседневного ношения. <br> Легко надеваются и снимаются.</p>
+   <img class="icon2-3" src="images/icon2.svg" alt="">
+  <img class="icon6" src="images/icon6.svg" alt="">
+   <img class="icon3-3" src="images/icon3.svg" alt="">
+   <p class="tramp">износостойкий принт</p>
+   <p class="president"> набор из 3-х штук</p>
+   <p class="usa">универсальный, регулируемый</p>
+   <p class="labubu-3">900 ₽</p>
+   <div class="diksidlylohov-3"> добавить в корзину</div>
+  </div>
+  </div>
+</div>
+<!--  -->
+<div id="card-like">
+   <div class="card-content">
+    <div class="photo4">   <img id="tshirt-card" src="images/tshirt.png" alt="" /></div>
+    <div class="textix">    <span class="back-btn" onclick="closeCard('card-like')">назад</span>
+    <p class="hrupko1">Футболка </p>
+   <p class="pupok1">Удобная и легкая футболка, идеально подойдёт <br> для тренировок и просто для повседневной носки. <br>Сделана из натурального хлопка. <br>Имеет oversize крой. </p>
+   <img class="icon1-4" src="images/icon1.svg" alt="">
+  <img class="icon5-4" src="images/icon5.svg" alt="">
+   <img class="icon3-4" src="images/icon3.svg" alt="">
+   <p class="tramp">100% хлопок</p>
+   <p class="president"> сделано в России</p>
+   <p class="usa">xxs, xs, s, m, l, xl, xxl</p>
+   <p class="labubu-3">3000 ₽</p>
+   <div class="diksidlylohov-3"> добавить в корзину</div>
+  </div>
+  </div>
+</div>
+<div id="card-noski" class="fullscreen-card">
+ <div class="card-content">
+    <div class="photo5">   <img id="noski-card" src="images/noski.png" alt="" /></div>
+    <div class="textix">    <span class="back-btn" onclick="closeCard('card-noski')">назад</span>
+    <p class="hrupko1">Носочки</p>
+   <p class="pupok1">Мягкие, эластичные носки для насекомых всех <br>видов. Подходят для занятий балетом, тренировок <br> и уютных вечеров в коконе. Дышащий материал, <br>идеальная посадка, усиленные зоны лапок. </p>
+    <div class="bubikroz1"></div>
+   <div class="bubikzel1"></div>
+   <img class="icon7" src="images/icon7.svg" alt="">
+  <img class="icon5-5" src="images/icon5.svg" alt="">
+   <img class="icon3" src="images/icon3.svg" alt="">
+   <p class="luda">уплотненный носок и пятка </p>
+   <p class="nam"> сделано в России</p>
+   <p class="p0000000000z">32-36, 36-40, 40-44 </p>
+   <p class="labubu">1000 ₽</p>
+   <div class="diksidlylohov"> добавить в корзину</div>
+  </div>
+  </div>
+</div>
+<div id="card-zluka" class="fullscreen-card">
+<div class="card-content">
+    <div class="photo6">   <img id="z-card" src="images/z.png" alt="" /></div>
+    <div class="textix">    <span class="back-btn" onclick="closeCard('card-zluka')">назад</span>
+    <p class="hrupko1">Значки</p>
+   <p class="pupok1">Значки с  логотипом нашей школы. <br>  Можно прикрепить к рюкзаку, кокону <br> или любимой одежде. Сделаны из металла, <br> застёжка-булавка, глянцевое покрытие.</p>
+    <div class="bubikroz1"></div>
+   <div class="bubikzel1"></div>
+   <img class="icon8" src="images/icon8.svg" alt="">
+  <img class="icon2" src="images/icon2.svg" alt="">
+   <img class="icon3" src="images/icon3.svg" alt="">
+   <p class="luda">надёжная булавка </p>
+   <p class="nam"> принт не сотрется</p>
+   <p class="p0000000000z"> 3х3см, 5х5см</p>
+   <p class="labubu">350 ₽</p>
+   <div class="diksidlylohov"> добавить в корзину</div>
+  </div>
+</div>
+</div>
+<div id="card-musicaaaa" class="fullscreen-card">
+  <div class="card-content">
+    <div class="photo7">   <img id="plastinka-card" src="images/plastinka.png" alt="" /></div>
+    <div class="textix">    <span class="back-btn" onclick="closeCard('card-musicaaaa')">назад</span>
+    <p class="hrupko1">Виниловая пластинка</p>
+   <p class="pupok1">Пластинка с лучшими мелодиями из наших <br> спектаклей. Отличное качество звука, идеально <br> подходит для прослушивания дома или в студии.</p>
+    <img class="icon9" src="images/icon9.svg" alt="">
+  <img class="icon10" src="images/icon10.svg" alt="">
+   <img class="icon3-3" src="images/icon3.svg" alt="">
+   <p class="tramp-777">лимитированное издание</p>
+   <p class="president-777"> набор из 3-х штук</p>
+   <p class="usa-777">универсальный, регулируемый</p>
+   <p class="labubu-3">2000 ₽</p>
+   <div class="diksidlylohov-3"> добавить в корзину</div>
+  </div>
+</div>
+</div>
+  <footer class="footershop">
+      <nav class="footer-nav">
         <a href="index.html">Главная</a>
         <a href="styles.html">Направления</a>
         <a href="shop.html">Магазин</a>
         <a href="events.html">События</a>
         <a href="team.html">Команда</a>
         <a href="filials.html">Филиалы</a>
-      </div>
-    </nav>
+      </nav>
 
-    <script src="javascript/main.js"></script>
-    <h1>Магазин</h1>
-  </body>
+      <p class="footer-text">
+        Кураторы: Камила Рихтер, Анна Комкова, Артём Латышев<br />
+        <br />
+        © 2025 BUGS DANCE, Кудинова София (@balleronsha) Б24УвКИ05<br />
+        <br />
+        Сделано с любовью к танцам и жукам 💚
+      </p>
+      <div id="paint">
+        <img id="funny-bug" src="images/your-color.svg" alt="Смешной жук" />
+        <div id="speech-bubble">Ты справишься! 🐞</div>
+      </div>
+    </footer>
 </html>

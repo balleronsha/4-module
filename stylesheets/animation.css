@@ -1,0 +1,261 @@
+/* shopping */
+/* icons */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.icon1:hover,
+.icon2:hover,
+.icon3:hover,
+.icon4:hover,
+.icon5:hover,
+.icon6:hover,
+.icon7:hover,
+.icon8:hover,
+.icon9:hover,
+.icon10:hover,
+.icon1-4:hover,
+.icon2-3:hover,
+.icon3-2:hover,
+.icon3-3:hover,
+.icon3-4:hover,
+.icon5-4:hover,
+.icon5-5:hover {
+  animation: spin 0.5s linear infinite;
+}
+/*  */
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-1px, 1px) rotate(-1deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+}
+
+/* Класс для постоянного трясущегося эффекта */
+.shake {
+  animation: shake 3s infinite ease-in-out;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* НАПРАВЛЕНИИИИИИИИИИИИИИИИИИИИИИИИИИИИЯИИЯИЯИИЯИЯИИЯИЯИИ*/
+/* 1 ДИВЧИК */
+#pila:hover,
+#love:hover,
+#kust:hover,
+#chocopie:hover,
+#pirat:hover,
+#sugar:hover {
+  background-color: #ff2c73;
+}
+#kust:hover {
+  border-left: 0.3vw solid #000;
+}
+/* ховер табличек  */
+@keyframes silly-shake-vw {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(-0.15vw, 0.15vw) rotate(-3deg);
+  }
+  20% {
+    transform: translate(0.15vw, -0.15vw) rotate(3deg);
+  }
+  30% {
+    transform: translate(-0.22vw, 0.07vw) rotate(-2deg);
+  }
+  40% {
+    transform: translate(0.22vw, -0.07vw) rotate(2deg);
+  }
+  50% {
+    transform: translate(-0.15vw, 0.15vw) rotate(-3deg);
+  }
+  60% {
+    transform: translate(0.15vw, -0.15vw) rotate(3deg);
+  }
+  70% {
+    transform: translate(-0.07vw, 0.07vw) rotate(-2deg);
+  }
+  80% {
+    transform: translate(0.07vw, -0.07vw) rotate(2deg);
+  }
+  90% {
+    transform: translate(-0.07vw, 0.15vw) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.silly-shake-vw {
+  animation: silly-shake-vw 0.6s infinite ease-in-out;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* МОЯ ДРИИИИИИИМ ТИИИИИИИИИИИИИМ*/
+#nlo1 {
+  animation: moveNLO1 40s ease-in-out infinite, rotateNLO 50s linear infinite;
+}
+
+#nlo2 {
+  animation: moveNLO2 45s ease-in-out infinite,
+    rotateNLOReverse 60s linear infinite;
+  animation-delay: 10s, 0s;
+}
+
+@keyframes moveNLO1 {
+  0% {
+    transform: translate(5vw, 10vh) rotate(0deg);
+  }
+  12.5% {
+    transform: translate(30vw, 20vh) rotate(45deg);
+  }
+  25% {
+    transform: translate(50vw, 5vh) rotate(90deg);
+  }
+  37.5% {
+    transform: translate(70vw, 25vh) rotate(135deg);
+  }
+  50% {
+    transform: translate(90vw, 10vh) rotate(180deg);
+  }
+  62.5% {
+    transform: translate(70vw, 50vh) rotate(225deg);
+  }
+  75% {
+    transform: translate(40vw, 60vh) rotate(270deg);
+  }
+  87.5% {
+    transform: translate(15vw, 40vh) rotate(315deg);
+  }
+  100% {
+    transform: translate(5vw, 10vh) rotate(360deg);
+  }
+}
+
+@keyframes moveNLO2 {
+  0% {
+    transform: translate(90vw, 80vh) rotate(0deg);
+  }
+  12.5% {
+    transform: translate(70vw, 70vh) rotate(-45deg);
+  }
+  25% {
+    transform: translate(50vw, 85vh) rotate(-90deg);
+  }
+  37.5% {
+    transform: translate(30vw, 65vh) rotate(-135deg);
+  }
+  50% {
+    transform: translate(10vw, 80vh) rotate(-180deg);
+  }
+  62.5% {
+    transform: translate(30vw, 50vh) rotate(-225deg);
+  }
+  75% {
+    transform: translate(60vw, 40vh) rotate(-270deg);
+  }
+  87.5% {
+    transform: translate(85vw, 60vh) rotate(-315deg);
+  }
+  100% {
+    transform: translate(90vw, 80vh) rotate(-360deg);
+  }
+}
+
+@keyframes rotateNLO {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rotateNLOReverse {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: -360deg;
+  }
+}
+
+/* для жуков дураков */
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-0.3vw, 0.3vw);
+  }
+  40% {
+    transform: translate(0.3vw, -0.3vw);
+  }
+  60% {
+    transform: translate(-0.2vw, 0.2vw);
+  }
+  80% {
+    transform: translate(0.2vw, -0.2vw);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s infinite ease-in-out;
+}

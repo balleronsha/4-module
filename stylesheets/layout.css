@@ -1,39 +1,3190 @@
-.burger-nav {
+/* * {
+  outline: 1px solid red;
+} */
+
+body {
+  background-color: #f6f6f6;
+  font-family: 'Helvetica Neue';
+  cursor: default;
+  overflow-x: hidden;
   position: relative;
 }
-
-.burger-button {
+.fil {
+  background-color: #1c1c1c;
+  font-family: 'Helvetica Neue';
+  cursor: default;
+  overflow-x: hidden;
+  position: relative;
+}
+/* body::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0px;
+}
+body::-webkit-scrollbar-thumb {
+  border: 0.15vw solid #000000;
+} */
+.burger-nav {
   position: fixed;
-  right: 2vw;
-  top: 2vw;
-  width: 4vw;
-  height: 4vw;
-  background-color: rgb(92, 211, 81);
-  border-radius: 50%;
+  width: 100vw;
+  height: 6vw;
+  background-color: #9ce158;
   z-index: 1000;
 }
+.burger-wrapper {
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+}
+.menubtn1 {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  top: 1.5vw;
+  right: 1.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.icon-left,
+.icon-right {
+  position: absolute;
+  width: 2.782vw;
+  height: 0.4vw;
+  background-color: #000;
 
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.icon-left {
+  transform: translateY(-0.6vw);
+}
+.icon-right {
+  transform: translateY(0.6vw);
+}
+.menubtn1.active .icon-left {
+  transform: rotate(45deg);
+}
+.menubtn1.active .icon-right {
+  transform: rotate(-45deg);
+}
 .menu {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #ef97d3;
+  top: 5vw;
+  padding-top: 3vw;
+  width: 100vw;
+  height: 100vw;
+  background-color: #9ce158;
   display: none;
   flex-direction: column;
   align-items: center;
-  padding: 3vw;
+  z-index: 1000;
   gap: 1vw;
-  z-index: 999;
-  border-top-left-radius: 3vw;
-  border-top-right-radius: 3vw;
 }
-
-.menu a {
-  color: rgb(0, 0, 0);
-  font-size: 2vw;
-}
-
 .menu.show {
   display: flex;
+}
+.menu a {
+  color: #000;
+  font-size: 4vw;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0.1vw;
+
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.glav-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.glav-svg text {
+  justify-content: center;
+  font-weight: bold;
+  font-size: 15vw;
+  fill: #ffffff;
+  stroke: #1c1c1c;
+  stroke-width: 6vw;
+  paint-order: stroke;
+}
+.menu-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 3vw; /* расстояние между кнопками */
+  margin-top: 4vw; /* отступ сверху от последних ссылок */
+  width: 100%;
+}
+
+.menu-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  background-color: #fff;
+  border: 0.3vw solid #000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  user-select: none;
+  white-space: nowrap;
+  font-weight: 500 !important;
+  font-size: 1.83vw !important;
+  padding: 1.5vw 4vw !important;
+  color: #000 !important;
+}
+
+.menu-btn:hover {
+  background-color: #ff2c73;
+  color: #fff !important;
+}
+
+.logo {
+  position: absolute;
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  font-size: 4.392vw;
+  color: #1c1c1c;
+  text-decoration: none;
+  top: 0.8vw;
+  left: 1vw;
+  letter-spacing: -1.15vw;
+}
+.logo span {
+  display: inline-block; /* чтобы можно было анимировать */
+  transition: transform 0.3s ease;
+  letter-spacing: -0.05vw;
+}
+
+/* Анимация прыжка */
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* прыжок вверх на 10px */
+  }
+}
+/* При наведении на всё лого — прыгают буквы с задержкой */
+.logo:hover span {
+  animation-name: jump;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+/* Задаём разную задержку для каждой буквы (волна) */
+.logo:hover span:nth-child(1) {
+  animation-delay: 0s;
+}
+.logo:hover span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.logo:hover span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.logo:hover span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.logo:hover span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.logo:hover span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.logo:hover span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.logo:hover span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.logo:hover span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.logo:hover span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+/*  БАДИ И ОСТАЛЬНОЙ КОД */
+.ascii-art {
+  font-family: monospace;
+  white-space: pre;
+  line-height: 0.6vw;
+  letter-spacing: 0.15vw;
+  top: 6vw;
+  left: -1vw;
+  position: absolute;
+  cursor: default; /* теперь обычный курсор */
+  overflow: hidden;
+}
+.ascii-art span {
+  position: relative;
+  color: #ff2c73;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  cursor: default; /* курсор обычный на символах */
+}
+.ascii-art span:hover {
+  color: #9ce158;
+}
+/* Оставшаяся подсветка */
+.ascii-art span.active {
+  color: #9ce158 !important;
+}
+.bugs-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.bug {
+  position: absolute;
+  width: 1vw;
+  height: 2vw;
+  background-image: url(../images/bugivugi.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@keyframes moveBug {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(50vw, 20vh) rotate(90deg);
+  }
+  50% {
+    transform: translate(30vw, 60vh) rotate(180deg);
+  }
+  75% {
+    transform: translate(70vw, 40vh) rotate(270deg);
+  }
+  100% {
+    transform: translate(0vw, 0vh) rotate(360deg);
+  }
+}
+.prikoly {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+.zagl1 {
+  font-weight: bold;
+  font-size: 4.392vw;
+  left: 56.735vw;
+  top: 24.817vw;
+  color: #000;
+  position: absolute;
+}
+.txt1 {
+  font-size: 1.464vw;
+  left: 56.955vw;
+  top: 34.846vw;
+  position: absolute;
+}
+.ind1 {
+  right: 5.637vw;
+  /* left: 49.488vw; */
+  top: 62.52vw;
+  position: absolute;
+}
+.zagl2 {
+  font-weight: bold;
+  font-size: 4.392vw;
+  left: 5.637vw;
+  top: 61vw;
+  color: #000;
+  position: absolute;
+}
+.txt2 {
+  font-size: 1.464vw;
+  left: 5.9vw;
+  top: 67vw;
+  position: absolute;
+}
+.bug-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 200vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bug1 {
+  position: absolute;
+  top: 60vw;
+  left: 63.031vw;
+  opacity: 0;
+  animation: wiggle 1s infinite ease-in-out;
+  transition: opacity 0.3s ease;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+/* Появление при ховере на .ind1 */
+.ind1:hover ~ .bug-wrapper .bug1 {
+  opacity: 1;
+}
+
+/* Анимация шевеления */
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(15deg) translateX(0.3vw);
+  }
+  50% {
+    transform: rotate(30deg) translateX(-0.3vw);
+  }
+  75% {
+    transform: rotate(15deg) translateX(0.3vw);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0vw);
+  }
+}
+
+.sprite1 {
+  position: absolute;
+  left: 15.9vw;
+  top: 95vw;
+  width: 7.247vw; /* ширина одного кадра = 99px */
+  height: 10.25vw; /* высота кадра = 140px */
+  background-image: url('../images/sprite1.svg');
+  background-repeat: no-repeat;
+  background-size: 72.47vw auto; /* 99px * 10 = 990px → 990 / 1366 * 100 = 72.47vw */
+  background-position: 0 0;
+  animation: play 1s steps(10) infinite;
+  overflow: hidden;
+}
+
+@keyframes play {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -72.47vw 0;
+  }
+}
+
+.sprite2 {
+  position: absolute;
+  left: 35.7vw;
+  top: 95vw;
+  width: 6.808vw;
+  height: 10.83vw;
+  background-image: url('../images/sprite2.svg');
+  background-repeat: no-repeat;
+  background-size: 81.71vw;
+  background-position: 0 0;
+  animation: play2 1s steps(12) infinite;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@keyframes play2 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -81.71vw 0;
+  }
+}
+.sprite3 {
+  position: absolute;
+  left: 55.5vw;
+  top: 95vw;
+  width: 9.15vw; /* ширина одного кадра */
+  height: 10.25vw; /* высота кадра */
+  background-image: url('../images/sprite3.svg');
+  background-repeat: no-repeat;
+  background-size: 82.38vw auto; /* ширина всей спрайт-ленты */
+  background-position: 0 0;
+  animation: play3 1s steps(9) infinite;
+  overflow: hidden;
+}
+
+@keyframes play3 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -82.38vw 0;
+  }
+}
+.sprite4 {
+  position: absolute;
+  left: 75.3vw;
+  top: 95vw;
+  width: 8.79vw; /* ширина одного кадра */
+  height: 10.25vw; /* высота одного кадра */
+  background-image: url('../images/sprite4.svg');
+  background-repeat: no-repeat;
+  background-size: 96.63vw auto; /* ширина всей ленты */
+  background-position: 0 0;
+  animation: playSprite4 1.1s steps(11) infinite;
+  overflow: hidden;
+}
+
+@keyframes playSprite4 {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -96.63vw 0;
+  }
+}
+.plus1,
+.plus2,
+.plus3,
+.plus4 {
+  font-size: 1.464vw;
+  top: 106vw;
+  position: absolute;
+  font-weight: 300;
+  font-style: italic;
+}
+.plus1 {
+  left: 14vw;
+}
+.plus2 {
+  left: 34vw;
+}
+.plus3 {
+  left: 55vw;
+}
+.plus4 {
+  left: 77vw;
+}
+.ind2 {
+  left: 5.637vw;
+  top: 118vw;
+  position: absolute;
+}
+.bug2 {
+  position: absolute;
+  top: 120vw;
+  left: -18vw;
+  opacity: 0;
+  animation: wiggle 1s infinite ease-in-out;
+  transition: opacity 0.3s ease;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+/* Появление при ховере на .ind1 */
+.ind2:hover ~ .bug-wrapper2 .bug2 {
+  opacity: 1;
+}
+
+/* Анимация шевеления */
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(15deg) translateX(0.3vw);
+  }
+  50% {
+    transform: rotate(30deg) translateX(-0.3vw);
+  }
+  75% {
+    transform: rotate(15deg) translateX(0.3vw);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0vw);
+  }
+}
+.zagl3 {
+  font-weight: bold;
+  font-size: 4.392vw;
+  left: 55vw;
+  top: 117.6vw;
+  color: #000;
+  position: absolute;
+}
+.txt3 {
+  font-size: 1.464vw;
+  left: 55.3vw;
+  top: 123.6vw;
+  position: absolute;
+}
+.tsennikiiiii {
+  top: 145vw;
+  position: absolute;
+  width: 100vw;
+  height: 40.41vw;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  will-change: opacity, transform;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+.tsennikiiiii.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.zagl4 {
+  font-weight: bold;
+  font-size: 4.392vw;
+  left: 2.5vw;
+  top: 1vw;
+  color: #000;
+  position: absolute;
+  z-index: 20;
+}
+.dengi1,
+.dengi2,
+.dengi3,
+.dengi4 {
+  font-size: 4.392vw;
+  color: #000;
+  position: absolute;
+  font-weight: 300;
+  z-index: 20;
+  letter-spacing: -2%;
+}
+.dengi1 {
+  left: 2.5vw;
+  top: 9.5vw;
+}
+.dengi2 {
+  left: 2.5vw;
+  top: 27.9vw;
+}
+.dengi3 {
+  left: 51.1vw;
+  top: 9.5vw;
+}
+.dengi4 {
+  left: 51.1vw;
+  top: 27.9vw;
+}
+.stoimost1,
+.stoimost2,
+.stoimost3,
+.stoimost4 {
+  font-weight: bold;
+  font-size: 4.392vw;
+  color: #ff2c73;
+  position: absolute;
+  z-index: 20;
+}
+.stoimost1 {
+  left: 3.5vw;
+  top: 15.5vw;
+}
+.stoimost2 {
+  left: 3.5vw;
+  top: 33.5vw;
+}
+.stoimost3 {
+  left: 51.5vw;
+  top: 15.5vw;
+}
+.stoimost4 {
+  left: 51.5vw;
+  top: 33.5vw;
+}
+.blablabla1,
+.blablabla2,
+.blablabla3,
+.blablabla4 {
+  font-size: 1.464vw;
+  position: absolute;
+  font-weight: 300;
+  font-style: italic;
+  color: #000;
+}
+.blablabla1 {
+  left: 16.5vw;
+  top: 16.5vw;
+}
+.blablabla2 {
+  left: 18.5vw;
+  top: 34.5vw;
+}
+.blablabla3 {
+  left: 67.5vw;
+  top: 15.5vw;
+}
+.blablabla4 {
+  left: 68vw;
+  top: 34vw;
+}
+.fast-bug {
+  overflow-x: hidden;
+  position: absolute;
+  width: 5vw;
+  height: 5vw;
+  background-image: url('../images/bugivugi.svg'); /* твой жук */
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: transform;
+  z-index: 1000;
+
+  /* Поворачиваем картинку изначально вверх влево в 0 градус (теперь она смотрит вправо) */
+  transform-origin: center center;
+  transform: rotate(-90deg);
+}
+.forma67 {
+  top: 184vw;
+  /* left: 2.8vw; */
+  position: absolute;
+  width: 100vw;
+  height: 40.41vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vopros-svg {
+  width: 100%;
+  height: auto;
+}
+
+.vopros-svg text {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 2.1vw; /* адаптивный размер */
+  fill: #ffffff;
+  stroke: #ff2c73;
+  stroke-width: 1vw; /* это толщина обводки */
+  paint-order: stroke;
+}
+.promo {
+  font-size: 2.928vw;
+  color: #000;
+  position: absolute;
+  font-style: italic;
+  font-weight: 300;
+  z-index: 20;
+  letter-spacing: -2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 18vw;
+}
+.forma {
+  position: absolute;
+  top: 24vw;
+  background-color: #9ce158;
+  border: 0.5vw solid rgb(0, 0, 0);
+  padding: 5vw;
+  width: 75vw;
+  box-sizing: border-box;
+  text-align: center; /* центрируем текст внутри */
+}
+
+.input-field {
+  flex: 1;
+  background: transparent;
+  border: 0.15vw solid rgb(0, 0, 0);
+  background-color: #ffffff;
+  padding: 0.75vw 1vw;
+  color: #000;
+  text-align: left;
+  font-size: 1.464vw;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Helvetica Neue';
+}
+.input-field::placeholder {
+  color: #000;
+  text-align: left;
+  font-size: 1.464vw;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Helvetica Neue';
+}
+.single-line {
+  margin-bottom: 3vw;
+  display: flex;
+  justify-content: center;
+}
+.consent {
+  display: flex;
+  gap: 0.75vw;
+  user-select: none;
+  cursor: pointer;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.consent input[type='checkbox'] {
+  display: none;
+}
+.custom-checkbox {
+  width: 2.5vw;
+  height: 2.5vw;
+  border: solid rgb(0, 0, 0);
+  position: relative;
+}
+.custom-checkbox::after {
+  content: '';
+  position: absolute;
+  left: 0.77vw;
+  top: 0.2vw;
+  width: 0.75vw;
+  height: 1.5vw;
+  border: solid rgb(0, 0, 0);
+  border-width: 0 0.2vw 0.2vw 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.consent input[type='checkbox']:checked + .custom-checkbox::after {
+  opacity: 1;
+}
+/* даю согласие */
+.consent-label {
+  top: 25vw;
+  left: 9vw;
+  position: absolute;
+  color: #000;
+  text-align: left;
+  font-size: 1.464vw;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Helvetica Neue';
+}
+.zapisatsya-btn {
+  position: absolute;
+  top: 55vw;
+
+  padding: 2vw;
+  width: 30vw;
+  box-sizing: border-box;
+  text-align: center; /* центрируем текст внутри */
+  margin-top: 4vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 0.5vw solid #9ce158;
+  color: rgb(0, 0, 0);
+  font-size: 2.928vw;
+  color: #000;
+  position: absolute;
+  font-weight: 300;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.zapisatsya-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 44, 115, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* выше всего */
+}
+
+.success-overlay.visible {
+  display: flex;
+}
+
+.success-message {
+  background: white;
+  padding: 4vw;
+  border: 0.5vw solid #000000;
+  text-align: center;
+  font-size: 2.928vw;
+  color: #000;
+  position: absolute;
+
+  z-index: 20;
+  letter-spacing: -2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 18vw;
+}
+.close-button {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  background: transparent;
+  border: none;
+  font-size: 6vw;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.close-button:hover {
+  color: #ccc;
+}
+/* ПОДВАААААЛ СЛЕЙ */
+.footer {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 255vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footerfil {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 55vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footereven {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 77vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footershop {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 141vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footerteam {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 97vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footerstyles {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 70.6vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Меню в столбик */
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav li {
+  display: flex;
+  flex-direction: column; /* вот это делает колонки */
+  gap: 10px; /* отступы между элементами, по желанию */
+  align-items: center; /* выравнивание по центру по горизонтали */
+  margin-bottom: 12px;
+}
+
+.footer-nav a {
+  padding: 0.3vw;
+  display: flex;
+  flex-direction: column; /* вот это делает колонки */
+  gap: 1vw; /* отступы между элементами, по желанию */
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.318vw;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #9ce158; /* зеленый акцент */
+}
+.footer-text {
+  position: absolute;
+  top: 15vw;
+  flex-direction: column; /* вот это делает колонки */
+  gap: 1vw; /* отступы между элементами, по желанию */
+  font-family: 'Helvetica Neue';
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 1.318vw;
+}
+/* Соцсеть */
+.footer-social {
+  margin-top: 20px;
+}
+
+.telegram-icon {
+  width: 32px;
+  height: 32px;
+  filter: invert(100%);
+  transition: filter 0.3s ease;
+}
+
+.telegram-icon:hover {
+  filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(150deg);
+  cursor: pointer;
+}
+#paint {
+  width: 80vw;
+  height: 80vw;
+  overflow: hidden;
+  position: absolute;
+  top: 1vw;
+  left: 67vw;
+  position: absolute;
+}
+
+#funny-bug {
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 2vw;
+}
+
+#speech-bubble {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background: #fff;
+  color: #333;
+  font-family: 'Helvetica Neue';
+  font-style: italic;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.318vw;
+  padding: 1vw;
+  border: 0.2vw solid #9ce158;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  max-width: 20vw;
+  z-index: 10;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.events {
+  background-color: #1c1c1c;
+  font-family: 'Helvetica Neue';
+  cursor: default;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.scene-container {
+  width: 100vw;
+  height: 100vh;
+  perspective: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.scene {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.poster {
+  position: absolute;
+  width: 9.224vw;
+  height: 13.177vw;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.concl {
+  position: absolute;
+  font-family: 'Helvetica Neue';
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.318vw;
+  font-weight: 300;
+  pointer-events: auto;
+  cursor: pointer;
+  user-select: none;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+  z-index: 8000;
+}
+/* Индивидуальные постеры */
+.poster1 {
+  top: 6vw;
+  left: 2vw;
+  transform: translateZ(-100px) rotateY(46deg);
+}
+
+.poster2 {
+  top: 13vw;
+  left: 20vw;
+  transform: translateZ(10px) rotateY(12deg);
+}
+
+.poster3 {
+  top: 24vw;
+  left: -2vw;
+  transform: translateZ(-100px) rotateY(20deg);
+}
+.pivo1 {
+  top: 29vw;
+  left: 15vw;
+  transform: translateZ(-45px) rotateY(37deg);
+}
+.poster4 {
+  top: 4vw;
+  left: 49vw;
+  transform: translateZ(-87px) rotateY(0deg);
+}
+.poster5 {
+  top: 15vw;
+  left: 37vw;
+  transform: translateZ(-120px) rotateY(15deg);
+}
+.poster6 {
+  top: 15vw;
+  left: 59vw;
+  transform: translateZ(-89px) rotateY(-23deg);
+}
+.pivo2 {
+  top: 25vw;
+  left: 48vw;
+  transform: translateZ(-90px) rotateY(-4deg);
+}
+.poster7 {
+  width: 11.112vw;
+  height: 8.272vw;
+  top: 18vw;
+  left: 76vw;
+  transform: translateZ(-60px) rotateY(-42deg);
+}
+.poster8 {
+  width: 11.112vw;
+  height: 8.272vw;
+  top: 27vw;
+  left: 88vw;
+  transform: translateZ(-54px) rotateY(-45deg);
+}
+.poster9 {
+  width: 11.112vw;
+  height: 8.272vw;
+  top: 12vw;
+  left: 89vw;
+  transform: translateZ(-68px) rotateY(-56deg);
+}
+.pivo3 {
+  top: 30vw;
+  left: 81vw;
+  transform: translateZ(-66px) rotateY(-27deg);
+}
+/*  */
+.poster10 {
+  top: 36vw;
+  left: 43vw;
+  transform: translateZ(2px) rotateY(13deg);
+}
+.poster11 {
+  top: 36vw;
+  left: 29vw;
+  transform: translateZ(-21px) rotateY(40deg);
+}
+.poster12 {
+  top: 39vw;
+  left: 57vw;
+  transform: translateZ(-104px) rotateY(-27deg);
+}
+.pivo4 {
+  top: 53vw;
+  left: 33vw;
+  transform: translateZ(-104px) rotateY(17deg);
+}
+.poster13 {
+  top: 50vw;
+  left: 0vw;
+  transform: translateZ(-65px) rotateY(38deg);
+}
+
+.poster14 {
+  top: 41vw;
+  left: 14svw;
+  transform: translateZ(-30px) rotateY(9deg);
+}
+
+.poster15 {
+  top: 55vw;
+  left: 17vw;
+  transform: translateZ(19px) rotateY(20deg);
+}
+.pivo5 {
+  top: 66vw;
+  left: 3vw;
+  transform: translateZ(-45px) rotateY(16deg);
+}
+.poster16 {
+  top: 50vw;
+  left: 92vw;
+  transform: translateZ(-65px) rotateY(-38deg);
+}
+
+.poster17 {
+  top: 38vw;
+  left: 76vw;
+  transform: translateZ(3px) rotateY(-20deg);
+}
+
+.poster18 {
+  top: 53vw;
+  left: 74vw;
+  transform: translateZ(36px) rotateY(-20deg);
+}
+.pivo6 {
+  top: 66vw;
+  left: 91vw;
+  transform: translateZ(-45px) rotateY(-40deg);
+}
+.poster19 {
+  width: 11.112vw;
+  height: 14.056vw;
+  top: 57vw;
+  left: 35vw;
+  transform: translateZ(-54px) rotateY(24deg);
+}
+.poster20 {
+  width: 11.112vw;
+  height: 14.202vw;
+  top: 54vw;
+  left: 48vw;
+  transform: translateZ(-99px) rotateY(-15deg);
+}
+.pivo7 {
+  top: 69vw;
+  left: 48vw;
+  transform: translateZ(-67px) rotateY(-5deg);
+}
+
+/*  */
+
+.modal {
+  display: none; /* скрыто по умолчанию */
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transform: none;
+}
+
+.modal-content {
+  background-color: #f6f6f6;
+  padding: 2vw;
+  border: 0.4vw solid #000000;
+  max-width: 500px;
+  width: 80vw;
+  position: relative;
+  box-shadow: 0 0 rgba(0, 0, 0, 0.5);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.modal-content p {
+  padding: 0.3vw;
+  display: flex;
+  flex-direction: column; /* вот это делает колонки */
+  gap: 1vw; /* отступы между элементами, по желанию */
+  font-family: 'Helvetica Neue';
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.318vw;
+  transition: color 0.3s ease;
+}
+
+.close {
+  position: absolute;
+  top: 1vw;
+  right: 1vw;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.close:hover {
+  color: #ff2c73;
+}
+.modal-content a {
+  color: #ff2c73;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.modal-content a:hover {
+  color: #000;
+}
+
+#modal1 {
+  top: 2vw;
+  transform: translateZ(100px);
+}
+#modal2 {
+  top: 5vw;
+  transform: translateZ(100px);
+}
+#modal3 {
+  transform: translateZ(100px);
+}
+#modal4 {
+  left: 1vw;
+  top: 4vw;
+  transform: translateZ(100px);
+}
+#modal5 {
+  left: 2vw;
+  top: 17vw;
+  transform: translateZ(100px);
+}
+#modal6 {
+  left: 15vw;
+  top: 22vw;
+  transform: translateZ(100px);
+}
+#modal7 {
+  left: 2vw;
+  top: 17vw;
+  transform: translateZ(100px);
+}
+/* 
+ */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* SHOP SHOP SHOIP SHOP SHOP */
+#meshok {
+  width: 33.309vw;
+  height: 53.075vw;
+  border-right: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#sumka {
+  position: absolute;
+  width: 28.111vw;
+  height: 24.597vw;
+  top: 14.202vw;
+  left: 2.562vw;
+}
+.sumkawhat {
+  font-size: 1.83vw;
+  left: 0.5vw;
+  top: 50.5vw;
+  position: absolute;
+}
+.sumkaprice {
+  font-size: 1.83vw;
+  left: 26.5vw;
+  top: 50.5vw;
+  position: absolute;
+}
+/*  */
+#yoga {
+  left: 33.309vw;
+  width: 33.309vw;
+  height: 53.075vw;
+  border-right: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#kover {
+  position: absolute;
+  width: 28.917vw;
+  height: 23.499vw;
+  top: 14.202vw;
+  left: 3.5vw;
+}
+.koverwhat {
+  font-size: 1.83vw;
+  left: 1.2vw;
+  top: 50.5vw;
+  position: absolute;
+}
+.koverprice {
+  font-size: 1.83vw;
+  left: 26.8vw;
+  top: 50.5vw;
+  position: absolute;
+}
+#fest {
+  left: 66.618vw;
+  width: 33.309vw;
+  height: 53.075vw;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#braslet {
+  left: 5.5vw;
+  width: 22.474vw;
+  height: 15.373vw;
+  top: 20.202vw;
+  position: absolute;
+}
+.brasletwhat {
+  font-size: 1.83vw;
+  left: 1.2vw;
+  top: 50.5vw;
+  position: absolute;
+}
+.brasletprice {
+  font-size: 1.83vw;
+  left: 26.8vw;
+  top: 50.5vw;
+  position: absolute;
+}
+/*  */
+#like {
+  top: 52.5vw;
+  height: 45.095vw;
+  width: 66.63vw;
+  position: absolute;
+  border-right: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+}
+#tshirt {
+  top: 6vw;
+  left: 8vw;
+  width: 46.413vw;
+  height: 33.016vw;
+  position: absolute;
+}
+.tshirtwhat {
+  font-size: 1.83vw;
+  left: 1.2vw;
+  top: 42.5vw;
+  position: absolute;
+}
+.tshirtprice {
+  font-size: 1.83vw;
+  left: 26.8vw;
+  top: 42.5vw;
+  position: absolute;
+}
+/*  */
+#noski {
+  top: 52.5vw;
+  left: 66.618vw;
+  width: 33.309vw;
+  height: 45.095vw;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#socks {
+  top: 7vw;
+  left: 5vw;
+  width: 24.012vw;
+  height: 29.404vw;
+  position: absolute;
+}
+.sockswhat {
+  font-size: 1.83vw;
+  left: 1.2vw;
+  top: 42.5vw;
+  position: absolute;
+}
+.socksprice {
+  font-size: 1.83vw;
+  left: 26.8vw;
+  top: 42.5vw;
+  position: absolute;
+}
+/*  */
+#zluka {
+  top: 97.8vw;
+  width: 33.309vw;
+  height: 43.119vw;
+  border-right: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#znach {
+  height: 23.84vw;
+  width: 22.742vw;
+  position: absolute;
+  top: 10vw;
+  left: 5vw;
+}
+.znachwhat {
+  font-size: 1.83vw;
+  left: 1.2vw;
+  top: 40.5vw;
+  position: absolute;
+}
+.znachprice {
+  font-size: 1.83vw;
+  left: 26.8vw;
+  top: 40.5vw;
+  position: absolute;
+}
+#musicaaaa {
+  left: 33.309vw;
+  top: 97.8vw;
+  height: 43.119vw;
+  width: 66.6vw;
+  position: absolute;
+
+  border-bottom: 0.3vw solid #000;
+}
+#plastinka {
+  position: absolute;
+  top: 4vw;
+  left: 12vw;
+  height: 33.04vw;
+  width: 45.806vw;
+}
+.plastinkawhat {
+  font-size: 1.83vw;
+  left: 34.6vw;
+  top: 40.5vw;
+  position: absolute;
+}
+.plastinkaprice {
+  font-size: 1.83vw;
+  left: 59.5vw;
+  top: 40.5vw;
+  position: absolute;
+}
+/* Плавный и мягкий эффект при ховере */
+img.rotate-hover {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center center;
+  display: block;
+  will-change: transform;
+}
+/* Поворот влево */
+#sumka:hover,
+#braslet:hover,
+#socks:hover,
+#znach:hover {
+  transform: rotate(-15deg) scale(1.03);
+}
+/* Поворот вправо */
+#kover:hover,
+#tshirt:hover,
+#plastinka:hover {
+  transform: rotate(15deg) scale(1.03);
+}
+/*  */
+.back-btn {
+  top: 1.5vw;
+  left: 45vw;
+  cursor: pointer;
+  color: #000000;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.318vw;
+  position: absolute;
+}
+/*  */
+/*  */
+#card-meshok,
+#card-yoga,
+#card-fest,
+#card-like,
+#card-noski,
+#card-zluka,
+#card-musicaaaa {
+  display: none;
+  position: fixed;
+  top: 6vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f6f6f6;
+  overflow: hidden;
+}
+.card-content {
+  overflow: hidden;
+}
+/* НУ ЭТО МЕРЧ  */
+#sumka-card {
+  width: 31.066vw;
+  height: 27.233vw;
+  position: absolute;
+  top: 13vw;
+  left: 5vw;
+  object-fit: contain;
+}
+#kover-card {
+  width: 39.458vw;
+  height: 32.064vw;
+  position: absolute;
+  top: 11vw;
+  left: 2vw;
+}
+#braslet-card {
+  width: 27.965vw;
+  height: 19.169vw;
+  position: absolute;
+  top: 14vw;
+  left: 6vw;
+}
+#tshirt-card {
+  width: 37.701vw;
+  height: 26.794vw;
+  position: absolute;
+  top: 11vw;
+  left: 2vw;
+}
+#noski-card {
+  width: 29.063vw;
+  height: 34.334vw;
+  position: absolute;
+  top: 8vw;
+  left: 5vw;
+}
+#z-card {
+  width: 27.452vw;
+  height: 28.843vw;
+  position: absolute;
+  top: 8vw;
+  left: 5vw;
+}
+#plastinka-card {
+  width: 40.776vw;
+  height: 28.917vw;
+  position: absolute;
+  top: 8vw;
+  left: 1vw;
+}
+
+/* ИЗО ИЗО ИЗО ИЗО ИЗО ИСКУССТВО */
+.photo1,
+.photo2,
+.photo3,
+.photo4,
+.photo5,
+.photo6,
+.photo7 {
+  width: 42.167vw;
+  height: 56.296vw;
+  border-right: 0.3vw solid #000;
+}
+/* ЗАГОЛОВОООООК */
+.hrupko1 {
+  font-size: 2.562vw;
+  color: #000000;
+  position: absolute;
+  top: 8.788vw;
+  left: 53.221vw;
+}
+
+/* КУЧА УЖАСНОГО МЕРЗКОГО ТЕКТСА */
+.pupok1 {
+  font-size: 1.464vw;
+  color: #000000;
+  position: absolute;
+  top: 13.034vw;
+  left: 53.221vw;
+}
+
+.bubikroz1 {
+  border-radius: 100%;
+  width: 3.294vw;
+  height: 3.294vw;
+  background-color: #ff2c73;
+  position: absolute;
+  top: 20.5vw;
+  left: 53.221vw;
+}
+.bubikzel1 {
+  border-radius: 100%;
+  width: 3.294vw;
+  height: 3.294vw;
+  background-color: #9ce158;
+  position: absolute;
+  top: 20.5vw;
+  left: 58.221vw;
+}
+.bubikroz2 {
+  border-radius: 100%;
+  width: 3.294vw;
+  height: 3.294vw;
+  background-color: #ff2c73;
+  position: absolute;
+  top: 21.9vw;
+  left: 53.221vw;
+}
+.bubikzel2 {
+  border-radius: 100%;
+  width: 3.294vw;
+  height: 3.294vw;
+  background-color: #9ce158;
+  position: absolute;
+  top: 21.9vw;
+  left: 58.221vw;
+}
+.bubikbel2 {
+  border-radius: 100%;
+  width: 3.294vw;
+  height: 3.294vw;
+  background-color: #ffffff;
+  position: absolute;
+  top: 21.9vw;
+  left: 63.6vw;
+}
+/* ИКОООООООООООООНКААААА МНЕ НУЖНАААА УЖЕ  */
+/* хлопок */
+.icon1 {
+  width: 1.684vw;
+  height: 1.684vw;
+  position: absolute;
+  top: 26vw;
+  left: 53.221vw;
+}
+.icon8 {
+  width: 1.83vw;
+  height: 1.83vw;
+  position: absolute;
+  top: 26vw;
+  left: 53.221vw;
+}
+.icon7 {
+  width: 1.464vw;
+  height: 1.977vw;
+  position: absolute;
+  top: 26vw;
+  left: 53.221vw;
+}
+.icon1-4 {
+  width: 1.684vw;
+  height: 1.684vw;
+  position: absolute;
+  top: 21vw;
+  left: 53.221vw;
+}
+/* стиралка*/
+.icon2 {
+  width: 1.318vw;
+  height: 1.684vw;
+  position: absolute;
+  top: 29vw;
+  left: 53.4vw;
+}
+.icon5-5 {
+  width: 1.83vw;
+  height: 1.611vw;
+  position: absolute;
+  top: 29vw;
+  left: 53.4vw;
+}
+/* стиралка*/
+.icon2-3 {
+  width: 1.318vw;
+  height: 1.684vw;
+  position: absolute;
+  top: 21vw;
+  left: 53.4vw;
+}
+.icon9 {
+  width: 1.977vw;
+  height: 1.977vw;
+  position: absolute;
+  top: 20vw;
+  left: 53.4vw;
+}
+/* размер не имеет значения  */
+.icon3 {
+  width: 1.391vw;
+  height: 1.391vw;
+  position: absolute;
+  top: 32vw;
+  left: 53.51vw;
+}
+/* биоразлагаемые отходы */
+.icon4 {
+  width: 1.684vw;
+  height: 1.684vw;
+  position: absolute;
+  top: 27vw;
+  left: 53.221vw;
+}
+/* РОССИЯ РОССИЯЯ В ЭТОМ СЛОВЕ ОГОНЬ И СИЛА*/
+.icon5 {
+  width: 1.83vw;
+  height: 1.611vw;
+  position: absolute;
+  top: 30vw;
+  left: 53.221vw;
+}
+.icon5-4 {
+  width: 1.83vw;
+  height: 1.611vw;
+  position: absolute;
+  top: 24.3vw;
+  left: 53.221vw;
+}
+/* пакетик шоппппппппингссссс */
+.icon6 {
+  width: 1.245vw;
+  height: 1.903vw;
+  position: absolute;
+  top: 24vw;
+  left: 53.41vw;
+}
+/* подарекс */
+.icon10 {
+  width: 1.811vw;
+  height: 1.811vw;
+  position: absolute;
+  top: 23.7vw;
+  left: 53.41vw;
+}
+/* размер не имеет значения  */
+.icon3-4 {
+  width: 1.391vw;
+  height: 1.391vw;
+  position: absolute;
+  top: 27.3vw;
+  left: 53.4vw;
+}
+.icon3-3 {
+  width: 1.391vw;
+  height: 1.391vw;
+  position: absolute;
+  top: 27.3vw;
+  left: 53.4vw;
+}
+.icon3-2 {
+  width: 1.391vw;
+  height: 1.391vw;
+  position: absolute;
+  top: 32.9vw;
+  left: 53.5vw;
+}
+/* ТЕЕЕЕЕЕЕЕКСТТТТТ */
+.luda {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 26.2vw;
+  left: 56vw;
+}
+.nam {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 29vw;
+  left: 56vw;
+}
+.p0000000000z {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 32vw;
+  left: 56vw;
+}
+.titan {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 27.2vw;
+  left: 56vw;
+}
+.nammir {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 30vw;
+  left: 56vw;
+}
+.nervamzhop {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 33.1vw;
+  left: 56vw;
+}
+.tramp {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 21vw;
+  left: 56vw;
+}
+.president {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 24.5vw;
+  left: 56vw;
+}
+.usa {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 27.4vw;
+  left: 56vw;
+}
+.tramp-777 {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 20.5vw;
+  left: 56vw;
+}
+.president-777 {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 24vw;
+  left: 56vw;
+}
+.usa-777 {
+  font-size: 1.318vw;
+  position: absolute;
+  top: 27.3vw;
+  left: 56vw;
+}
+/* ЭТО ЦЕННИК ЛАБУБУ */
+.labubu {
+  font-size: 2.562vw;
+  position: absolute;
+  top: 38.996vw;
+  left: 79.5vw;
+}
+.labubu-3 {
+  font-size: 2.562vw;
+  position: absolute;
+  top: 33.996vw;
+  left: 79.5vw;
+}
+.diksidlylohov {
+  background-color: #ff2c73;
+  width: 16.105vw;
+  height: 2.562vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  font-size: 1.464vw;
+  font-weight: 300;
+  left: 53.221vw;
+  top: 38.996vw;
+}
+.diksidlylohov-3 {
+  background-color: #ff2c73;
+  width: 16.105vw;
+  height: 2.562vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  font-size: 1.464vw;
+  font-weight: 300;
+  left: 53.221vw;
+  top: 33.996vw;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* НАПРАВЛЕНИИИИИИИИИИИИИИИИИИИИИИИИИИИИЯИИЯИЯИИЯИЯИИЯИЯИИ*/
+/* 1 ДИВЧИК */
+#pila {
+  width: 33.309vw;
+  height: 38.067vw;
+  border-right: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#xoxo1 {
+  height: 12.299vw;
+  width: 23.646vw;
+  top: 13vw;
+  left: 3vw;
+  position: absolute;
+}
+.roza1 {
+  font-size: 2.562vw;
+  font-weight: 300;
+  font-style: italic;
+  top: 34vw;
+  left: 12.5vw;
+  position: absolute;
+}
+
+/* 2 ДИВЧИК */
+#love {
+  left: 33.309vw;
+  width: 33.309vw;
+  height: 38.067vw;
+  border-right: 0.3vw solid #000;
+  border-left: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#xoxo2 {
+  height: 18.422vw;
+  width: 14.691vw;
+  top: 10vw;
+  left: 9vw;
+  position: absolute;
+}
+.roza2 {
+  font-size: 2.562vw;
+  font-weight: 300;
+  font-style: italic;
+  top: 34vw;
+  left: 6.6vw;
+  position: absolute;
+}
+/* 3 ДИВЧИК */
+#kust {
+  left: 66.9vw;
+  width: 33.309vw;
+  height: 38.067vw;
+  border-left: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#xoxo3 {
+  height: 19.693vw;
+  width: 15.886vw;
+  top: 11vw;
+  left: 8.5vw;
+  position: absolute;
+}
+.roza3 {
+  font-size: 2.562vw;
+  font-weight: 300;
+  font-style: italic;
+  top: 34vw;
+  left: 10.6vw;
+  position: absolute;
+}
+/* 4 ДИВЧИК */
+#chocopie {
+  top: 38.3vw;
+  width: 33.309vw;
+  height: 32.067vw;
+  border-right: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#xoxo4 {
+  height: 12.958vw;
+  width: 25.915vw;
+  top: 7vw;
+  left: 2.5vw;
+  position: absolute;
+}
+.roza4 {
+  font-size: 2.562vw;
+  font-weight: 300;
+  font-style: italic;
+  top: 28vw;
+  left: 10.5vw;
+  position: absolute;
+}
+/* 5 ДИВЧИК */
+#pirat {
+  top: 38.3vw;
+  left: 33.309vw;
+  width: 33.309vw;
+  height: 32.067vw;
+  border-right: 0.3vw solid #000;
+  border-left: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#xoxo5 {
+  height: 14.641vw;
+  width: 19.985vw;
+  top: 7vw;
+  left: 7vw;
+  position: absolute;
+}
+.roza5 {
+  font-size: 2.562vw;
+  font-weight: 300;
+  font-style: italic;
+  top: 28vw;
+  left: 9.3vw;
+  position: absolute;
+}
+/* 6 ДИВЧИК */
+#sugar {
+  top: 38.3vw;
+  left: 66.9vw;
+  width: 33.309vw;
+  height: 32.067vw;
+  border-left: 0.3vw solid #000;
+  border-bottom: 0.3vw solid #000;
+  position: absolute;
+}
+#xoxo6 {
+  height: 32.548vw;
+  width: 21.202vw;
+  top: -3vw;
+  left: 5.5vw;
+  position: absolute;
+}
+.roza6 {
+  font-size: 2.562vw;
+  font-weight: 300;
+  font-style: italic;
+  top: 28vw;
+  left: 7vw;
+  position: absolute;
+}
+/* душная развлекалвока */
+#skuchno1,
+#skuchno2,
+#skuchno3,
+#skuchno4,
+#skuchno5,
+#skuchno6 {
+  background-color: #fff;
+  border: 0.3vw solid #000;
+  position: absolute;
+  width: 41.142vw;
+  height: 29.283vw;
+  display: none;
+  z-index: 700;
+  top: 35vw;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rahat1,
+.rahat2,
+.rahat3,
+.rahat4,
+.rahat5,
+.rahat6 {
+  font-size: 2.562vw;
+  font-weight: bold;
+  position: absolute;
+  left: 2vw;
+  top: 1vw;
+}
+.lukum1,
+.lukum2,
+.lukum3,
+.lukum4,
+.lukum5,
+.lukum6 {
+  font-size: 1.464vw;
+  position: absolute;
+  left: 2vw;
+  top: 6.5vw;
+}
+.vkusna1,
+.vkusna2,
+.vkusna3,
+.vkusna4,
+.vkusna5,
+.vkusna6 {
+  font-size: 1.318vw;
+  position: absolute;
+  left: 2vw;
+  top: 14vw;
+}
+.vkusna1 b,
+.vkusna2 b,
+.vkusna3 b,
+.vkusna4 b,
+.vkusna5 b,
+.vkusna6 b {
+  font-weight: bold;
+}
+.flow {
+  position: absolute;
+  top: 0.5vw;
+  right: 1.3vw;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.flow:hover {
+  color: #ff2c73;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* МОЯ ДРИИИИИИИМ ТИИИИИИИИИИИИИМ*/
+.radost {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible !important;
+  z-index: -10; /* Поднимаем выше фона и других элементов */
+  pointer-events: none;
+}
+
+#nlo1,
+#nlo2 {
+  position: absolute !important;
+  width: 63.763vw;
+  height: 76.867vw;
+}
+.prepod1 {
+  position: absolute;
+  top: 8.199vw;
+  left: 2.709vw;
+  height: 41.142vw;
+  width: 28.917vw;
+  perspective: 1000px;
+  cursor: pointer;
+  /* border: 0.3vw solid #000; */
+  background: transparent; /* фон у .prepod1 не нужен */
+  overflow: visible; /* чтобы содержимое не обрезалось */
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+.prepod1.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+/* Фронт сторона — твой текущий фронт контент */
+.front1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+}
+/* Обратная сторона */
+.prepod1-back {
+  position: absolute;
+  top: 0; /* относительная к card-inner */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tvar-wrapper {
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 100%;
+  /* height: 40.282vw;
+  width: 27.8vw; */
+  overflow: hidden;
+  /* border: 0.3vw solid #2bbab3; */
+}
+#tvar1 {
+  top: 18vw;
+  left: -7vw;
+  height: 32.504vw;
+  width: 26.428vw;
+  overflow: hidden;
+  position: absolute;
+}
+.klichka1 {
+  left: 4.5vw;
+  font-size: 2.562vw;
+  top: 1.3vw;
+  position: absolute;
+}
+.whois1 {
+  left: 5.3vw;
+  font-size: 1.464vw;
+  top: 4.3vw;
+  position: absolute;
+  font-weight: 300;
+}
+.opis1 {
+  left: 2.6vw;
+  font-size: 1.464vw;
+  font-weight: 300;
+  top: 11.3vw;
+  position: absolute;
+}
+/* ДВААААААААААААААА */
+.prepod2 {
+  position: absolute;
+  top: 8.199vw;
+  left: 35.1vw;
+  height: 41.142vw;
+  width: 28.917vw;
+  perspective: 1000px;
+  cursor: pointer;
+  background: transparent;
+  overflow: visible;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.prepod2.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Фронт сторона — твой текущий фронт контент */
+.front2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+}
+
+/* Обратная сторона */
+.prepod2-back {
+  position: absolute;
+  top: 0; /* относительная к card-inner */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tvar-wrapper {
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 100%;
+  /* height: 40.282vw;
+  width: 27.8vw; */
+  overflow: hidden;
+  /* border: 0.3vw solid #2bbab3; */
+}
+#tvar2 {
+  left: 5vw;
+  top: 12vw;
+  height: 26.061vw;
+  width: 43.631vw;
+  overflow: hidden;
+  position: absolute;
+}
+
+.klichka2 {
+  left: 3.2vw;
+  font-size: 2.562vw;
+  top: 1.3vw;
+  position: absolute;
+}
+.whois2 {
+  left: 5vw;
+  font-size: 1.464vw;
+  top: 4.3vw;
+  position: absolute;
+  font-weight: 300;
+}
+.opis2 {
+  left: 2.5svw;
+  font-size: 1.464vw;
+  font-weight: 300;
+  top: 11.3vw;
+  position: absolute;
+}
+/* ТРИИИИИИИИИИИИИИИИ*/
+.prepod3 {
+  position: absolute;
+  top: 8.199vw;
+  left: 67.543vw;
+  height: 41.142vw;
+  width: 28.917vw;
+  perspective: 1000px;
+  cursor: pointer;
+  background: transparent;
+  overflow: visible;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.prepod3.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Фронт сторона — твой текущий фронт контент */
+.front3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+}
+
+/* Обратная сторона */
+.prepod3-back {
+  position: absolute;
+  top: 0; /* относительная к card-inner */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tvar-wrapper {
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 100%;
+  /* height: 40.282vw;
+  width: 27.8vw; */
+  overflow: hidden;
+  /* border: 0.3vw solid #2bbab3; */
+}
+#tvar3 {
+  left: 8vw;
+  top: 17vw;
+  height: 37.775vw;
+  width: 30.381vw;
+  overflow: hidden;
+  position: absolute;
+}
+
+.klichka3 {
+  left: 2.7vw;
+  font-size: 2.562vw;
+  top: 1.3vw;
+  position: absolute;
+}
+.whois3 {
+  left: 3.1vw;
+  font-size: 1.464vw;
+  top: 4.3vw;
+  position: absolute;
+  font-weight: 300;
+}
+.opis3 {
+  left: 2.9vw;
+  font-size: 1.464vw;
+  font-weight: 300;
+  top: 11.3vw;
+  position: absolute;
+}
+
+/* БЛОООООООООООК ФОООООООООООРРРРРТОЧКАААА  */
+.prepod4 {
+  position: absolute;
+  top: 53.199vw;
+  left: 2.709vw;
+  height: 41.142vw;
+  width: 28.917vw;
+  perspective: 1000px;
+  cursor: pointer;
+  background: transparent;
+  overflow: visible;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+.prepod4.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.front4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+}
+.prepod4-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tvar-wrapper {
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#tvar4 {
+  top: 1vw;
+  left: -21vw;
+  height: 30.454vw;
+  width: 37.042vw;
+  overflow: hidden;
+  position: absolute;
+}
+.klichka4 {
+  left: 2.3vw;
+  font-size: 2.562vw;
+  top: 1.3vw;
+  position: absolute;
+}
+.whois4 {
+  left: 5.2vw;
+  font-size: 1.464vw;
+  top: 4.3vw;
+  position: absolute;
+  font-weight: 300;
+}
+.opis4 {
+  left: 2.6vw;
+  font-size: 1.464vw;
+  font-weight: 300;
+  top: 11.3vw;
+  position: absolute;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* БЛОООООООООООК пятерка за просмотр в кармане   */
+.prepod5 {
+  position: absolute;
+  top: 53.199vw;
+  left: 35.1vw;
+  height: 41.142vw;
+  width: 28.917vw;
+  perspective: 1000px;
+  cursor: pointer;
+  background: transparent;
+  overflow: visible;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+.prepod5.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.front5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+}
+.prepod5-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tvar-wrapper {
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#tvar5 {
+  top: 24vw;
+  left: -2vw;
+  height: 29.063vw;
+  width: 23.792vw;
+  overflow: hidden;
+  position: absolute;
+}
+.klichka5 {
+  left: 5.3vw;
+  font-size: 2.562vw;
+  top: 1.3vw;
+  position: absolute;
+}
+.whois5 {
+  left: 5vw;
+  font-size: 1.464vw;
+  top: 4.3vw;
+  position: absolute;
+  font-weight: 300;
+}
+.opis5 {
+  left: 2.6vw;
+  font-size: 1.464vw;
+  font-weight: 300;
+  top: 11.3vw;
+  position: absolute;
+}
+/* БЛОООООООООООК шесть...  */
+.prepod6 {
+  position: absolute;
+  top: 53.199vw;
+  left: 67.543vw;
+  height: 41.142vw;
+  width: 28.917vw;
+  perspective: 1000px;
+  cursor: pointer;
+  background: transparent;
+  overflow: visible;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+.prepod6.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.front6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+}
+.prepod6-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 0.3vw solid #000;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tvar-wrapper {
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#tvar6 {
+  top: -6vw;
+  left: 11vw;
+  height: 41.288vw;
+  width: 44.217vw;
+  overflow: hidden;
+  position: absolute;
+}
+.klichka6 {
+  left: 2vw;
+  font-size: 2.562vw;
+  top: 1.3vw;
+  position: absolute;
+}
+.whois6 {
+  left: 5vw;
+  font-size: 1.464vw;
+  top: 4.3vw;
+  position: absolute;
+  font-weight: 300;
+  text-align: center;
+}
+.opis6 {
+  left: 3vw;
+  font-size: 1.464vw;
+  font-weight: 300;
+  top: 11vw;
+  position: absolute;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* ГОСПОДИ ПОСЛЕДНИЙ БЛОК  */
+
+/* Заголовки */
+.surf {
+  color: #ffffff;
+  font-size: 4.392vw;
+  font-weight: bold;
+  position: absolute;
+  top: 8vw;
+  left: 3vw;
+}
+
+.twerk {
+  color: #ffffff;
+  font-size: 1.464vw;
+  font-weight: 300;
+  position: absolute;
+  top: 13vw;
+  left: 3vw;
+}
+
+/* Карточки с филиалами */
+.lecpro,
+.prudpro,
+.lugpro {
+  width: 57.321vw;
+  height: 32.138vw;
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.imglec,
+.imgprud,
+.imglug {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.txtlec,
+.txtprud,
+.txtlug {
+  position: absolute;
+  bottom: 2vw;
+  left: 1vw;
+  color: #fff;
+  font-size: 4.392vw;
+  font-weight: bold;
+}
+
+/* Контейнер слайдера */
+.slider-wrapper {
+  position: relative;
+  width: 94vw;
+  height: 40vw;
+  overflow: hidden;
+  top: 19vw;
+  left: 3vw;
+}
+
+.slider-wrapper.expanded {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  top: -10vw;
+  left: 0;
+  transition: all 0.6s ease;
+  z-index: 100;
+}
+
+/* Стрелки */
+.arrow-btn {
+  position: absolute;
+  top: 17vw;
+  transform: translateY(-50%);
+  width: 3vw;
+  height: 3vw;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 60;
+  padding: 0;
+}
+
+#prev {
+  background-image: url(../images/Polygonleft.svg);
+  left: 1vw;
+  width: 3.148vw;
+  height: 5vw;
+  background-repeat: no-repeat;
+}
+
+#next {
+  background-image: url(../images/Polygonright.svg);
+  right: 1vw;
+  width: 3.148vw;
+  height: 5vw;
+  background-repeat: no-repeat;
+}
+
+.arrow-btn:hover::before,
+.arrow-btn:hover::after {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Трек слайдера */
+.slider-track {
+  display: flex;
+  gap: 5vw;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+/* Описание филиала */
+.lec-desc {
+  display: none; /* Изначально скрыт */
+  height: auto;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+  background: #f6f6f6;
+
+  position: relative;
+}
+
+.lec-desc.visible {
+  display: block;
+  opacity: 1;
+  width: 100vw;
+  height: 210vw;
+  z-index: 100;
+}
+
+.big1 {
+  width: 100vw;
+  height: 56.076vw;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 2vw;
+}
+
+/* Текст и кнопка внутри описания */
+.glavnayakakashka {
+  font-size: 4.392vw;
+  font-weight: bold;
+  position: absolute;
+  top: 8vw;
+  left: 3vw;
+  color: #ffffff;
+}
+
+.milo {
+  font-size: 1.464vw;
+  position: absolute;
+  color: #ffffff;
+  top: 47vw;
+  left: 3vw;
+}
+
+#close-desc {
+  top: 8vw;
+  left: 94vw;
+  position: absolute;
+  font-size: 1.464vw;
+  font-weight: 300;
+  font-style: italic;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Класс для скрытия основного контента */
+.hidden {
+  display: none !important;
+}
+
+/* Бегущая строка */
+.runsrk1 {
+  top: 57vw;
+  position: absolute;
+  white-space: nowrap;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 4.392vw;
+  color: #1c1c1c;
+  overflow: hidden;
+  display: inline-block;
+  width: 205%; /* чуть больше, чтобы зазор ушел */
+  animation: scroll-left 4s linear infinite;
+}
+
+.runsrk1::after {
+  content: attr(data-text);
+  position: absolute;
+  white-space: nowrap;
+  top: 0;
+  left: 99%;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 3.66vw;
+  color: #1c1c1c;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-51%); /* чуть больше 50%, чтобы компенсировать */
+  }
+}
+.boshkabolitsilno {
+  font-size: 4.392vw;
+  font-weight: bold;
+  position: absolute;
+  top: 62vw;
+  left: 1.7vw;
+  color: #1c1c1c;
+}
+.sonrevet {
+  font-size: 4.392vw;
+  font-weight: bold;
+  position: absolute;
+  top: 132vw;
+  left: 1.7vw;
+  color: #1c1c1c;
+}
+.povar {
+  font-size: 4.392vw;
+  font-weight: bold;
+  position: absolute;
+  top: 165vw;
+  left: 1.7vw;
+  color: #1c1c1c;
+}
+.depresion {
+  font-size: 1.464vw;
+  position: absolute;
+  color: #000000;
+  top: 138vw;
+  left: 1.7vw;
+}
+.kartina {
+  font-size: 1.464vw;
+  position: absolute;
+  color: #000000;
+  top: 171vw;
+  left: 1.7vw;
+}
+.kover {
+  font-size: 1.464vw;
+  position: absolute;
+  color: #000000;
+  top: 67vw;
+  left: 1.7vw;
+}
+.zal1,
+.zal2,
+.zal3,
+.zal4 {
+  width: 47.291vw;
+  height: 26.501vw;
+  position: absolute;
+}
+
+.image-container1 {
+  position: relative;
+  display: inline-block;
+  top: 17vw;
+  left: 1.7vw;
+  width: 47.291vw;
+  height: 26.501vw;
+  overflow: hidden;
+}
+.image-container2 {
+  position: relative;
+  display: inline-block;
+  top: 17vw;
+  left: 3.5vw;
+  width: 47.291vw;
+  height: 26.501vw;
+  overflow: hidden;
+}
+.image-container3 {
+  position: relative;
+  display: inline-block;
+  top: 18vw;
+  left: 1.7vw;
+  width: 47.291vw;
+  height: 26.501vw;
+  overflow: hidden;
+}
+.image-container4 {
+  position: relative;
+  display: inline-block;
+  top: 18vw;
+  left: 3.5vw;
+  width: 47.291vw;
+  height: 26.501vw;
+  overflow: hidden;
+}
+.image-container1 img,
+.image-container2 img,
+.image-container3 img,
+.image-container4 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-container1 p,
+.image-container2 p,
+.image-container3 p,
+.image-container4 p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.8vw 1.2vw;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.464vw;
+  opacity: 0;
+  font-size: 1.464vw;
+  font-weight: 300;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 400;
+}
+
+.image-container1:hover p,
+.image-container2:hover p,
+.image-container3:hover p,
+.image-container4:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+.autoslide-container {
+  width: 47.291vw;
+  height: 26.501vw;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  top: 22vw;
+  left: 51.2vw;
+}
+.autoslide {
+  width: 47.291vw;
+  height: 26.501vw;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+#autoslide-image {
+  width: 47.291vw;
+}
+.chena1 {
+  position: relative;
+  display: inline-block;
+  top: 42vw;
+  left: 1.7vw;
+  width: 47.291vw;
+  height: 26.501vw;
+  overflow: hidden;
+}
+.chena2 {
+  position: relative;
+  display: inline-block;
+  top: 42vw;
+  left: 3.5vw;
+  width: 47.291vw;
+  height: 26.501vw;
+  overflow: hidden;
 }

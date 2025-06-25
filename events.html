@@ -4,21 +4,299 @@
     <meta charset="UTF-8" />
     <title>События</title>
     <link rel="stylesheet" href="stylesheets/style.css" />
+         <link rel="icon" type="images/svg" href="images/fav.png" />
   </head>
-  <body>
+  <body class="events">
+   <!-- бургер -->
     <nav class="burger-nav">
-      <div class="burger-button" onclick="toggleMenu()"></div>
+      <div class="burger-wrapper">
+        <div class="menubtn1" data-menu="1">
+          <div class="icon-left"></div>
+          <div class="icon-right"></div>
+        </div>
+        <a class="logo" href="#">
+          <span>B</span>
+          <span>U</span>
+          <span>G</span>
+          <span>S</span>
+          <span> &nbsp</span>
+          <span>D</span>
+          <span>A</span>
+          <span>N</span>
+          <span>C</span>
+          <span>E</span>
+        </a>
+      </div>
       <div class="menu" id="menu">
+        <a href="index.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              ГЛАВНАЯ
+            </text>
+          </svg></a
+        >
+        <a href="styles.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              НАПРАВЛЕНИЯ
+            </text>
+          </svg></a
+        >
+        <a href="shop.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              МАГАЗИН
+            </text>
+          </svg></a
+        >
+        <a href="events.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              СОБЫТИЯ
+            </text>
+          </svg></a
+        >
+        <a href="team.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              КОМАНДА
+            </text>
+          </svg></a
+        >
+        <a href="filials.html">
+          <svg
+            viewBox="0 0 1300 200"
+            class="glav-svg"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+            >
+              ФИЛИАЛЫ
+            </text>
+          </svg></a
+        >
+        <div class="menu-buttons">
+          <a
+            href="https://balleronsha.github.io/excursion-bugs-dance/"
+            target="_blank"
+            class="menu-btn"
+            >ТА САМАЯ ИГРА</a
+          >
+          <a href="https://t.me/bugsdance" target="_blank" class="menu-btn"
+            >НАШ ТЕЛЕГРАМ</a
+          >
+        </div>
+      </div>
+    </nav>
+    </div>
+    <footer class="footereven">
+      <nav class="footer-nav">
         <a href="index.html">Главная</a>
         <a href="styles.html">Направления</a>
         <a href="shop.html">Магазин</a>
         <a href="events.html">События</a>
         <a href="team.html">Команда</a>
         <a href="filials.html">Филиалы</a>
-      </div>
-    </nav>
+      </nav>
 
+      <p class="footer-text">
+        Кураторы: Камила Рихтер, Анна Комкова, Артём Латышев<br />
+        <br />
+        © 2025 BUGS DANCE, Кудинова София (@balleronsha) Б24УвКИ05<br />
+        <br />
+        Сделано с любовью к танцам и жукам 💚
+      </p>
+      <!-- 
+      <p>
+        <a
+          href="https://t.me/bugsdance"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="telegram-link"
+        >
+          <img src="images/tg.svg" alt="Telegram" />
+          Наш Telegram-канал
+        </a>
+      </p> -->
+         <div id="paint">
+        <img id="funny-bug" src="images/your-color.svg" alt="Смешной жук" />
+        <div id="speech-bubble">Ты справишься! 🐞</div>
+      </div>
+    </footer>
+  
+<div class="scene-container">
+  <div class="scene" id="scene">
+    <div class="poster poster1">
+      <img src="images/2222con.jpg" alt="Плакат 1" />
+    </div>
+    <div class="poster poster2">
+      <img src="images/222con.jpg" alt="Плакат 2" />
+    </div>
+    <div class="poster poster3">
+      <img src="images/22con.jpg" alt="Плакат 3" />
+    </div>
+    <p class="concl pivo1">(22.06.2025)</p>
+    <div class="modal" id="modal1">
+  <div class="modal-content">
+    <span class="close" data-modal="modal1">&times;</span>
+    <p>Школа приглашает на ежегодный отчётный концерт <br> <br>В программе — лучшие номера сезона от участников <br> всех направлений, от начинающих до профессионалов. Вас ждут дебюты, смелые постановки и много вдохновляющих крыльев, лапок и движений. <br>Это тёплый и важный вечер для всех, кто провёл <br>  сезон в зале. Приходите поддержать танцующих <br> и почувствовать, как танцует насекомый мир. <br> <br>Вход свободный <br> <br> Адрес: Бохрыйск, улица Руэтих, д. 77, корпус 1. </p>
+  </div>
+</div>
+    <!--  -->
+ <div class="poster poster4">
+      <img src="images/bzzzz1.jpg" alt="Плакат 4" />
+    </div>
+ <div class="poster poster5">
+      <img src="images/bzzzzz2.jpg" alt="Плакат 5" />
+    </div>
+  <div class="poster poster6">
+      <img src="images/bzzz3.jpg" alt="Плакат 6" />
+    </div>
+      <p class="concl pivo2">(05.05.2025)</p>
+      <div class="modal" id="modal2">
+  <div class="modal-content">
+    <span class="close" data-modal="modal2">&times;</span>
+    <p>Открытие нового филиала школы рядом с прудом! <br><br>Торжественная встреча, первые занятия и лёгкий <br> танцевальный ветер над гладью воды сделали этот <br>день особенным. Здесь будут проходить занятия <br>по пилатесу, стрейчингу и contemporary в залах, <br> наполненных светом и отражениями водной глади. <br> Пространство создано с заботой о каждом <br> крылышке. С радостью ждём новых учеников <br>на берегу! <br> <br>Бохрыйск, Набережный перелесок, д. 12, корпус 2</p>
+  </div>
+</div>
+    <!--  -->
+  <div class="poster poster7">
+      <img src="images/klava1.jpg" alt="Плакат 7" />
+    </div>
+    <div class="poster poster8">
+      <img src="images/klava2.jpg" alt="Плакат 8" />
+    </div>  
+<div class="poster poster9">
+      <img src="images/klava3.jpg" alt="Плакат 9" />
+    </div>  
+        <p class="concl pivo3">(игра!)</p>
+        <div class="modal" id="modal3">
+  <div class="modal-content">
+    <span class="close" data-modal="modal3">&times;</span>
+    <p>Теперь у маленьких учеников нашей школы есть свой уголок — мы запустили специальный новый сайт <br> с увлекательной игрой для детей! <br> <br> Внутри есть 4 мини-игры, где можно порисовать, послушать музыку и поиграть с Клавой. Она может скоротать время перед тренировкой или снять стресс после выступлений.Играть можно прямо на сайте, <br> в любое время — дома, в пути или перед сном. <br> <br>   <a href="https://balleronsha.github.io/excursion-bugs-dance/" target="_blank">Переходи на сайт!</a> </p>
+  </div>
+</div>
+    <!--  -->
+    <div class="poster poster10">
+      <img src="images/tnt1.jpg" alt="Плакат 10" />
+    </div>  
+     <div class="poster poster11">
+      <img src="images/tnt2.jpg" alt="Плакат 11" />
+    </div> 
+     <div class="poster poster12">
+      <img src="images/tnt3.jpg" alt="Плакат 12" />
+    </div> 
+       <p class="concl pivo4">(12.03.2025)</p>
+       <div class="modal" id="modal4">
+  <div class="modal-content">
+    <span class="close" data-modal="modal4">&times;</span>
+    <p>С 12 по 17 марта 2025 года в школе прошла <br> масштабная неделя премьер, представившая <br>сразу три уникальных спектакля. <br> <br> «Тысячи крыльев» рассказали о силе единства <br> и воздушной пластике в хореографии, где каждое <br> движение — как взмах общего полёта. <br> <br>«Озеро насекомых» стало отражением хрупкой <br>красоты природы и балетной дисциплины. <br> <br>«Трепет усиков» исследовал тонкие сигналы, <br> чувствительность и внутренние импульсы тела.</p>
+  </div>
+</div>
+    <!--  -->
+         <div class="poster poster13">
+      <img src="images/mk1.jpg" alt="Плакат 13" />
+    </div>  
+     <div class="poster poster14">
+      <img src="images/mk2.jpg" alt="Плакат 14" />
+    </div> 
+     <div class="poster poster15">
+      <img src="images/mk3.jpg" alt="Плакат 15" />
+    </div> 
+       <p class="concl pivo5">(30.01.2025)</p>
+       <div class="modal" id="modal5">
+  <div class="modal-content">
+    <span class="close" data-modal="modal5">&times;</span>
+    <p>30 января 2025 года состоялся <br> особенный мастер-класс — занятие провела сама <br> основательница студии и признанная балерина <br> насекомого мира Клавдия Скарабей. <br> <br>
+В классе царила атмосфера настоящей сцены: <br> тишина, концентрация, мерцание крыльев. Этот <br> вечер стал вдохновением для всех <br> — от начинающих до опытных танцоров.</p>
+  </div>
+</div>
+    <!--  -->
+             <div class="poster poster16">
+      <img src="images/dod1.jpg" alt="Плакат 16" />
+    </div>  
+     <div class="poster poster17">
+      <img src="images/dod2.jpg" alt="Плакат 17" />
+    </div> 
+     <div class="poster poster18">
+      <img src="images/dod3.jpg" alt="Плакат 18" />
+    </div> 
+       <p class="concl pivo6">(30.12.2024)</p>
+       <div class="modal" id="modal6">
+  <div class="modal-content">
+    <span class="close" data-modal="modal6">&times;</span>
+    <p >
+      Прошёл день открытых дверей в филиале школы <br> 
+      <br>Bugs Dance на Лугу (ул. Листик, д. 3). <br> Гости познакомились с преподавателями, <br>попробовали себя в разных направлениях — <br> от пилатеса до классики, и заглянули за кулисы <br>репетиций. <br> <br>В залах звучала музыка, а крылатые и лапчатые <br>гости танцевали вместе, открывая для себя магию <br>
+       балета.</p>
+  </div>
+</div>
+    <!--  -->
+          <div class="poster poster19">
+      <img src="images/mod10.jpg" alt="Плакат 19" />
+    </div> 
+     <div class="poster poster20">
+      <img src="images/mod101.jpg" alt="Плакат 20" />
+    </div> 
+       <p class="concl pivo7">(новый дизайн)</p>
+<div class="modal" id="modal7">
+  <div class="modal-content">
+    <span class="close" data-modal="modal7">&times;</span>
+    <p> Весной 2025 года школа полностью обновила <br> визуальную айдентику. Мы попрощались <br> с нежно-розовыми пастельными оттенками, <br> в которых прошло детство школы, и шагнули <br> в яркую взрослую фазу — теперь в палитре <br> преобладают насыщенные чёрный, малиновый <br> и травяной зелёный. <br> <br>
+Этот переход стал естественным продолжением <br> роста и смелости, которую школа обрела <br> за последние сезоны.</p>
+  </div>
+</div>
+    <!--  -->
     <script src="javascript/main.js"></script>
-    <h1>События</h1>
+    
   </body>
 </html>

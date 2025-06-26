@@ -116,7 +116,24 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 //
 //
-//
+//// Показ описания и скрытие основного контента при клике на lecpro
+const lecpro = document.getElementById('lecpro');
+const desc = document.getElementById('lec-desc');
+const mainContent = document.querySelector('.filial-main-content');
+const closeBtn = document.getElementById('close-desc');
+
+if (lecpro && desc && mainContent && closeBtn) {
+  lecpro.addEventListener('click', () => {
+    mainContent.classList.add('hidden');
+    desc.classList.add('visible');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    desc.classList.remove('visible');
+    mainContent.classList.remove('hidden');
+  });
+}
 //
 //
 //

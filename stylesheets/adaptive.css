@@ -200,7 +200,7 @@
   .tsennikiiiii {
     top: 329vw;
     width: 100vw;
-    height: 100%;
+    height: 68%;
   }
   .zagl4 {
     font-size: 6.392vw;
@@ -271,6 +271,186 @@
   .blablabla4 {
     left: 37vw;
     top: 97.5vw;
+  }
+  .vopros-svg {
+    top: 240vw;
+    width: 100%;
+    height: auto;
+  }
+  .vopros-svg text {
+    justify-content: center;
+    font-weight: bold;
+    font-size: 4vw;
+    stroke-width: 3vw;
+    paint-order: stroke;
+  }
+  .promo {
+    font-size: 3vw;
+
+    top: 20vw;
+  }
+  .forma {
+    top: 28vw;
+    width: 85vw;
+    padding: 4vw;
+    height: 65vw;
+  }
+  .forma67 {
+    top: 440vw;
+  }
+  .input-field {
+    padding: 0vw 1vw;
+    font-size: 3.464vw;
+    height: 10vw;
+  }
+  .single-line {
+    margin-bottom: 7vw;
+  }
+  .input-field::placeholder {
+    font-size: 3.464vw;
+  }
+
+  .custom-checkbox {
+    width: 5.5vw;
+    height: 5.5vw;
+  }
+  .custom-checkbox::after {
+    content: '';
+    position: absolute;
+    left: 0.77vw;
+    top: 0.21vw;
+    width: 2.75vw;
+    height: 6.5vw;
+  }
+  .consent input[type='checkbox']:checked + .custom-checkbox::after {
+    opacity: 1;
+  }
+  /* даю согласие */
+  .consent-label {
+    top: 54vw;
+    left: 12vw;
+    font-size: 3.464vw;
+  }
+  .zapisatsya-btn {
+    top: 90vw;
+    padding: 1vw;
+    width: 42vw;
+    height: 8vw;
+    margin-top: 7vw;
+    font-size: 2.928vw;
+  }
+
+  .success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 44, 115, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* выше всего */
+  }
+
+  .success-overlay.visible {
+    display: flex;
+  }
+
+  .success-message {
+    background: #f6f6f6;
+    padding: 3vw;
+    border: 0.5vw solid #000000;
+    text-align: center;
+    font-size: 2.4vw;
+    top: 18vw;
+  }
+  .close-button {
+    position: absolute;
+    top: 2vw;
+    right: 2vw;
+    background: transparent;
+    border: none;
+    font-size: 6vw;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  .close-button:hover {
+    color: #ccc;
+  }
+  .footer {
+    width: 100vw;
+    height: 39vw;
+    top: 550vw;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .footer-nav1 {
+    position: absolute;
+  }
+  .footer-nav2 {
+    left: 24vw;
+    position: absolute;
+  }
+  .footer-nav1 li {
+    display: flex;
+    flex-direction: column; /* вот это делает колонки */
+    gap: 10px; /* отступы между элементами, по желанию */
+    align-items: center; /* выравнивание по центру по горизонтали */
+    margin-bottom: 12px;
+  }
+  .footer-nav2 li {
+    display: flex;
+    flex-direction: column; /* вот это делает колонки */
+    gap: 10px; /* отступы между элементами, по желанию */
+    align-items: center; /* выравнивание по центру по горизонтали */
+    margin-bottom: 12px;
+  }
+
+  .footer-nav1 a,
+  .footer-nav2 a {
+    padding: 0.3vw;
+    gap: 1vw;
+    font-size: 3vw;
+  }
+
+  .footer-text {
+    position: absolute;
+    top: 22vw;
+    gap: 1vw;
+    font-family: 'Helvetica Neue';
+    color: #fff;
+    font-size: 2.6vw;
+  }
+
+  #paint {
+    width: 50vw;
+    height: 50vw;
+    overflow: hidden;
+    position: absolute;
+    top: 1vw;
+    left: 67vw;
+    position: absolute;
+  }
+
+  #funny-bug {
+    width: 52.187vw;
+    height: 35.401vw;
+    left: -4vw;
+  }
+
+  #speech-bubble {
+    font-size: 2.6vw;
+    padding: 1vw;
+    max-width: 50vw;
   }
 }
 /* 

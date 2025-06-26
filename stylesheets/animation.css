@@ -142,6 +142,13 @@
 /*  */
 /*  */
 /*  */
+
+.poster.animate-entry {
+  animation: whirlwind 2s ease-in-out;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+
 /*  */
 /*  */
 /*  */
@@ -262,4 +269,17 @@
 
 .shake {
   animation: shake 0.5s infinite ease-in-out;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* ФИЛИАЛЫЫЫЫЫ ФИЛИЛАЛЫЫЫЫЫ ФИЛИАЛЫЫЫЫЫЫЫ*/
+.lecpro:hover,
+.prudpro:hover,
+.lugpro:hover {
+  transform: scale(1.05);
 }

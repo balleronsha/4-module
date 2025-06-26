@@ -713,7 +713,7 @@ svg {
 }
 .forma {
   position: absolute;
-  top: 24vw;
+  top: 8vw;
   background-color: #9ce158;
   border: 0.5vw solid rgb(0, 0, 0);
   padding: 5vw;
@@ -888,7 +888,40 @@ svg {
   width: 100vw;
   height: 20vw;
   position: absolute;
-  top: 55vw;
+  top: 57vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footerfil1 {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 57vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footerfil2 {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 57vw;
+  padding: 2vw;
+  overflow: hidden;
+}
+.footerfil3 {
+  background-color: #1c1c1c;
+  color: #fff;
+  bottom: -000.1vw;
+  width: 100vw;
+  height: 20vw;
+  position: absolute;
+  top: 57vw;
   padding: 2vw;
   overflow: hidden;
 }
@@ -1176,7 +1209,7 @@ svg {
 .poster10 {
   top: 36vw;
   left: 43vw;
-  transform: translateZ(2px) rotateY(13deg);
+  transform: translateZ(-25px) rotateY(13deg);
 }
 .poster11 {
   top: 36vw;
@@ -1256,7 +1289,15 @@ svg {
   left: 48vw;
   transform: translateZ(-67px) rotateY(-5deg);
 }
-
+.pivo1:hover,
+.pivo2:hover,
+.pivo3:hover,
+.pivo4:hover,
+.pivo5:hover,
+.pivo6:hover,
+.pivo7:hover {
+  color: #ff2c73;
+}
 /*  */
 
 .modal {
@@ -1274,12 +1315,24 @@ svg {
   background-color: #f6f6f6;
   padding: 2vw;
   border: 0.4vw solid #000000;
-  max-width: 500px;
-  width: 80vw;
+  max-width: 100%;
+  width: 43vw;
   position: relative;
   box-shadow: 0 0 rgba(0, 0, 0, 0.5);
   font-family: 'Helvetica Neue', sans-serif;
 }
+/* .modal-content {
+  background-color: #f6f6f6;
+  padding: 2vw;
+  border: 0.4vw solid #000000;
+  max-width: 800px;
+  width: 90%;
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0 0 2vw rgba(0, 0, 0, 0.5);
+  font-family: 'Helvetica Neue', sans-serif;
+}
+ */
 
 .modal-content p {
   padding: 0.3vw;
@@ -2960,7 +3013,6 @@ img.rotate-hover {
   overflow: hidden;
   transition: opacity 0.8s ease;
   background: #f6f6f6;
-
   position: relative;
 }
 
@@ -2971,7 +3023,40 @@ img.rotate-hover {
   height: 210vw;
   z-index: 100;
 }
+.prud-desc {
+  display: none; /* Изначально скрыт */
+  height: auto;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+  background: #f6f6f6;
+  position: relative;
+}
 
+.prud-desc.visible {
+  display: block;
+  opacity: 1;
+  width: 100vw;
+  height: 210vw;
+  z-index: 100;
+}
+.lug-desc {
+  display: none; /* Изначально скрыт */
+  height: auto;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+  background: #f6f6f6;
+  position: relative;
+}
+
+.lug-desc.visible {
+  display: block;
+  opacity: 1;
+  width: 100vw;
+  height: 210vw;
+  z-index: 100;
+}
 .big1 {
   width: 100vw;
   height: 56.076vw;

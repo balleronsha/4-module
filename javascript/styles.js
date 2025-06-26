@@ -10,49 +10,7 @@ function toggleMenu() {
 //
 //
 //
-//
-document.addEventListener('DOMContentLoaded', () => {
-  const footer = document.querySelector('.footershop');
 
-  // Сопоставление товаров и карточек
-  const pairs = [
-    { triggerId: 'meshok', cardId: 'card-meshok' },
-    { triggerId: 'yoga', cardId: 'card-yoga' },
-    { triggerId: 'fest', cardId: 'card-fest' },
-    { triggerId: 'like', cardId: 'card-like' },
-    { triggerId: 'noski', cardId: 'card-noski' },
-    { triggerId: 'zluka', cardId: 'card-zluka' },
-    { triggerId: 'musicaaaa', cardId: 'card-musicaaaa' },
-  ];
-
-  pairs.forEach(({ triggerId, cardId }) => {
-    const trigger = document.getElementById(triggerId);
-    const card = document.getElementById(cardId);
-
-    if (trigger && card) {
-      trigger.addEventListener('click', () => {
-        card.style.display = 'block';
-        document.body.classList.add('no-scroll');
-        if (footer) footer.style.display = 'none';
-      });
-    }
-  });
-});
-
-//  Функция закрытия карточки
-function closeCard(id) {
-  const card = document.getElementById(id);
-  const footer = document.querySelector('.footershop');
-
-  if (card) {
-    card.style.display = 'none';
-    document.body.classList.remove('no-scroll');
-    if (footer) footer.style.display = 'block';
-  }
-}
-
-//
-//
 //
 //
 //
@@ -131,46 +89,46 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 // смена изображения
 
-document.addEventListener('DOMContentLoaded', () => {
-  const blocks = ['pila', 'love', 'kust', 'chocopie', 'pirat', 'sugar'];
-  const xoxoIds = ['xoxo1', 'xoxo2', 'xoxo3', 'xoxo4', 'xoxo5', 'xoxo6'];
-  const skuchnoIds = [
-    'skuchno1',
-    'skuchno2',
-    'skuchno3',
-    'skuchno4',
-    'skuchno5',
-    'skuchno6',
-  ];
+// document.addEventListener('DOMContentLoaded', () => {
+//   const blocks = ['pila', 'love', 'kust', 'chocopie', 'pirat', 'sugar'];
+//   const xoxoIds = ['xoxo1', 'xoxo2', 'xoxo3', 'xoxo4', 'xoxo5', 'xoxo6'];
+//   const skuchnoIds = [
+//     'skuchno1',
+//     'skuchno2',
+//     'skuchno3',
+//     'skuchno4',
+//     'skuchno5',
+//     'skuchno6',
+//   ];
 
-  blocks.forEach((blockId, index) => {
-    const block = document.getElementById(blockId);
-    const xoxoImg = document.getElementById(xoxoIds[index]);
-    const skuchno = document.getElementById(skuchnoIds[index]);
+//   blocks.forEach((blockId, index) => {
+//     const block = document.getElementById(blockId);
+//     const xoxoImg = document.getElementById(xoxoIds[index]);
+//     const skuchno = document.getElementById(skuchnoIds[index]);
 
-    if (!block || !xoxoImg || !skuchno) return;
-    block.addEventListener('click', () => {
-      skuchno.style.display = 'block';
+//     if (!block || !xoxoImg || !skuchno) return;
+//     block.addEventListener('click', () => {
+//       skuchno.style.display = 'block';
 
-      const src = xoxoImg.getAttribute('src');
-      const filename = src.split('/').pop().replace('.svg', '');
-      if (!filename.toLowerCase().includes('pink')) {
-        const pinkSrc = `images/${filename}pink.svg`;
-        xoxoImg.setAttribute('src', pinkSrc);
-      }
-    });
-    const closeBtn = skuchno.querySelector('.flow');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        skuchno.style.display = 'none';
+//       const src = xoxoImg.getAttribute('src');
+//       const filename = src.split('/').pop().replace('.svg', '');
+//       if (!filename.toLowerCase().includes('pink')) {
+//         const pinkSrc = `images/${filename}pink.svg`;
+//         xoxoImg.setAttribute('src', pinkSrc);
+//       }
+//     });
+//     const closeBtn = skuchno.querySelector('.flow');
+//     if (closeBtn) {
+//       closeBtn.addEventListener('click', () => {
+//         skuchno.style.display = 'none';
 
-        const pinkSrc = xoxoImg.getAttribute('src');
-        const originalSrc = pinkSrc.replace('pink.svg', '.svg');
-        xoxoImg.setAttribute('src', originalSrc);
-      });
-    }
-  });
-});
+//         const pinkSrc = xoxoImg.getAttribute('src');
+//         const originalSrc = pinkSrc.replace('pink.svg', '.svg');
+//         xoxoImg.setAttribute('src', originalSrc);
+//       });
+//     }
+//   });
+// });
 //
 //
 document.addEventListener('DOMContentLoaded', () => {

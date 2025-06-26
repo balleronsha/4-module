@@ -452,6 +452,233 @@
     padding: 1vw;
     max-width: 50vw;
   }
+
+  /* 
+ */
+  /*  */ /* 
+ */
+  /*  */ /* 
+ */
+  /*  */ /* 
+ */
+  /*  */ /* 
+ */
+  /*  */ /* 
+ */
+  /*  */ /* 
+ */
+  /* 2 блоооооооооооооооок направления */
+  /* Контейнеры идут в столбик */
+  #pila,
+  #love,
+  #kust,
+  #chocopie,
+  #pirat,
+  #sugar {
+    position: relative;
+    width: 100vw;
+    border: none;
+    border-bottom: 0.3vw solid #000;
+    margin: 0;
+  }
+
+  /* Первый блок чуть выше — под меню */
+  #pila {
+    height: 110vw;
+  }
+
+  /* Остальные — обычная почти-квадратная пропорция */
+  #love,
+  #kust,
+  #chocopie,
+  #pirat,
+  #sugar {
+    top: 0vw;
+    height: 95vw;
+    left: 0vw;
+  }
+
+  /* SVG-шки — чуть меньше, по центру */
+  #xoxo1 {
+    width: 70%;
+    height: auto;
+    position: absolute;
+    left: 47vw;
+    top: 40vw;
+    transform: translateX(-50%);
+  }
+  #xoxo2 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 50vw;
+    top: 10vw;
+    transform: translateX(-50%);
+  }
+  #xoxo3 {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    left: 50vw;
+    top: 13vw;
+    transform: translateX(-50%);
+  }
+  #xoxo4 {
+    width: 73%;
+    height: auto;
+    position: absolute;
+    left: 50vw;
+    top: 22vw;
+    transform: translateX(-50%);
+  }
+
+  #xoxo5 {
+    width: 66%;
+    height: auto;
+    position: absolute;
+    left: 51vw;
+    top: 21vw;
+    transform: translateX(-50%);
+  }
+
+  #xoxo6 {
+    width: 66%;
+    height: auto;
+    position: absolute;
+    left: 51vw;
+    top: 21vw;
+    transform: translateX(-50%);
+  }
+
+  /* Подписи (roza) — аккуратно под SVG */
+  .roza1 {
+    font-size: 6.2vw;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    top: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .roza2 {
+    font-size: 6.2vw;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    top: 85vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .roza3 {
+    font-size: 6.2vw;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    top: 83vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .roza4 {
+    font-size: 6.2vw;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    top: 83vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .roza5 {
+    font-size: 6.2vw;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    top: 83vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+  .roza6 {
+    font-size: 6.2vw;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    top: 83vw;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* Popup окна (если юзаешь их) — делаем адаптивными */
+  #skuchno1,
+  #skuchno2,
+  #skuchno3,
+  #skuchno4,
+  #skuchno5,
+  #skuchno6 {
+    width: 95vw;
+    height: auto;
+    max-height: 90vh;
+    top: 45vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 6vw;
+    overflow-y: auto;
+  }
+
+  .rahat1,
+  .rahat2,
+  .rahat3,
+  .rahat4,
+  .rahat5,
+  .rahat6 {
+    font-size: 5vw;
+    top: 0;
+
+    margin-bottom: 2vw;
+    position: relative;
+  }
+
+  .lukum1,
+  .lukum2,
+  .lukum3,
+  .lukum4,
+  .lukum5,
+  .lukum6 {
+    font-size: 3.5vw;
+    position: relative;
+    margin-top: 2vw;
+    left: -14vw;
+  }
+
+  .vkusna1,
+  .vkusna2,
+  .vkusna3,
+  .vkusna4,
+  .vkusna5,
+  .vkusna6 {
+    font-size: 3.2vw;
+    position: relative;
+    margin-top: -10vw;
+    left: -9vw;
+  }
+
+  .flow {
+    font-size: 6vw;
+    top: 2vw;
+    right: 2vw;
+  }
 }
 /* 
  */

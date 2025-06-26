@@ -96,6 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 //
 
+// //  Функция закрытия карточки
+// function closeCard(id) {
+//   const card = document.getElementById(id);
+//   const footer = document.querySelector('.footershop');
+
+//   if (card) {
+//     card.style.display = 'none';
+//     document.body.classList.remove('no-scroll');
+//     if (footer) footer.style.display = 'block';
+//   }
+// }
+
+//
+//
 //
 //
 //

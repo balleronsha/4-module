@@ -130,6 +130,10 @@
 /*  */
 /*  */
 /* */
+.diksidlylohov-3:hover,
+.diksidlylohov:hover {
+  cursor: not-allowed;
+}
 /*  */
 /*  */
 /*  */

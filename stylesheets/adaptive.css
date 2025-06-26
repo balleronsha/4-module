@@ -40,7 +40,7 @@
   .menu {
     top: 19vw;
     width: 100vw;
-    height: 146vw;
+    height: 100vh;
     flex-direction: column;
     z-index: 1000;
     gap: 19vw;
@@ -68,36 +68,209 @@
     paint-order: stroke;
   }
   .menu-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 3vw; /* расстояние между кнопками */
-    margin-top: 4vw; /* отступ сверху от последних ссылок */
-    width: 100%;
+    flex-direction: column; /* располагать кнопки в столбик */
+    align-items: center;
+    gap: 4vw; /* больше отступ между кнопками */
+    margin-top: 6vw;
   }
 
   .menu-btn {
-    color: #000;
-    background-color: #fff;
-    border: 0.3vw solid #000;
-
-    font-weight: 500 !important;
-    font-size: 1.83vw !important;
-    padding: 1.5vw 4vw !important;
-    color: #000 !important;
+    font-size: 4vw !important; /* крупнее текст */
+    padding: 3vw 6vw !important; /* больше отступы */
+    border: 0.5vw solid #000; /* толще рамка */
   }
-
   .logo {
     font-size: 12.5vw;
     top: 4.3vw;
     left: 1.8vw;
     letter-spacing: -4.15vw;
   }
+  /* ГЛАВНАЯ СТРАНИЦА ГЛАВНАЯ СТРАНИЦА ГЛАВНАЯ СТРАНИЦА ГЛАВНАЯ СТРАНИЦА ГЛАВНАЯ СТРАНИЦА ГЛАВНАЯ СТРАНИЦАГЛАВНАЯ СТРАНИЦА ГЛАВНАЯ СТРАНИЦА ГЛАВНАЯ СТРАНИЦА */
   .ascii-art {
     rotate: -90deg;
     line-height: 0.95vw;
     letter-spacing: 0.15vw;
-    top: 36vw;
-    left: -1vw;
+    top: 29vw;
+    left: 1vw;
+    transform: scale(1.08);
+  }
+  .zagl1 {
+    left: 39.5vw;
+    top: 100.817vw;
+    width: 59vw;
+  }
+  .zagl1 text {
+    font-weight: bold;
+    fill: #ffffff;
+    stroke: #ff2c73;
+    stroke-width: 0.6vw; /* немного меньше, чтобы не "распухал" */
+    paint-order: stroke;
+    font-size: 2.8vw; /* меньше — меньше вылезает */
+    overflow: visible;
+  }
+  .txt1 {
+    font-size: 3vw;
+    left: 20.955vw;
+    top: 110.846vw;
+  }
+  .ind1 {
+    left: 18.488vw;
+    top: 126.52vw;
+    position: absolute;
+  }
+  .zagl2 {
+    font-weight: bold;
+    font-size: 6.392vw;
+    left: 4.5vw;
+    top: 168vw;
+    color: #000;
+    position: absolute;
+  }
+  .bug1,
+  .bug2,
+  .fast-bug {
+    display: none !important;
+  }
+  .txt2 {
+    font-size: 3vw;
+    left: 6.8vw;
+    top: 175.846vw;
+  }
+  .sprite1 {
+    left: 25.9vw;
+    top: 200vw;
+    transform: scale(2);
+  }
+
+  .sprite2 {
+    left: 67.7vw;
+    top: 200vw;
+    transform: scale(2);
+  }
+
+  .sprite3 {
+    left: 25.9vw;
+    top: 232vw;
+    transform: scale(2);
+  }
+
+  .sprite4 {
+    left: 67.7vw;
+    top: 232vw;
+    transform: scale(2);
+  }
+  .plus1,
+  .plus2,
+  .plus3,
+  .plus4 {
+    font-size: 3vw;
+    top: 106vw;
+  }
+  .plus1 {
+    top: 217vw;
+    left: 20vw;
+  }
+  .plus2 {
+    top: 217vw;
+    left: 61vw;
+  }
+  .plus3 {
+    top: 249vw;
+    left: 20vw;
+  }
+  .plus4 {
+    top: 249vw;
+    left: 66vw;
+  }
+  .zagl3 {
+    font-size: 6.392vw;
+    left: 4.5vw;
+    top: 257vw;
+  }
+  .txt3 {
+    font-size: 3vw;
+    left: 6.8vw;
+    top: 266vw;
+  }
+  .ind2 {
+    left: 18.488vw;
+    top: 291.52vw;
+    position: absolute;
+  }
+  .tsennikiiiii {
+    top: 329vw;
+    width: 100vw;
+    height: 100%;
+  }
+  .zagl4 {
+    font-size: 6.392vw;
+    left: 5vw;
+  }
+  .dengi1,
+  .dengi2,
+  .dengi3,
+  .dengi4 {
+    font-size: 4.7vw;
+  }
+  .dengi1 {
+    left: 7vw;
+    top: 8.5vw;
+  }
+  .dengi2 {
+    left: 37vw;
+    top: 31.9vw;
+  }
+  .dengi3 {
+    left: 7vw;
+    top: 62vw;
+  }
+  .dengi4 {
+    left: 37vw;
+    top: 91.9vw;
+  }
+  .stoimost1,
+  .stoimost2,
+  .stoimost3,
+  .stoimost4 {
+    font-size: 6.392vw;
+  }
+  .stoimost1 {
+    left: 7vw;
+    top: 22vw;
+  }
+  .stoimost2 {
+    left: 37vw;
+    top: 46vw;
+  }
+  .stoimost3 {
+    left: 7vw;
+    top: 77.5vw;
+  }
+  .stoimost4 {
+    left: 37vw;
+    top: 107.5vw;
+  }
+  .blablabla1,
+  .blablabla2,
+  .blablabla3,
+  .blablabla4 {
+    font-size: 3vw;
+  }
+  .blablabla1 {
+    left: 7vw;
+    top: 14.5vw;
+  }
+  .blablabla2 {
+    left: 37vw;
+    top: 38vw;
+  }
+  .blablabla3 {
+    left: 7vw;
+    top: 67.5vw;
+  }
+  .blablabla4 {
+    left: 37vw;
+    top: 97.5vw;
   }
 }
 /* 

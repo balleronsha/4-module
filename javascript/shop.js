@@ -95,25 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 //
 //
-// ШЕВЕЛИТСЯ МОНСТП
-document.addEventListener('DOMContentLoaded', () => {
-  const cardIds = [
-    '#sumka-card',
-    '#kover-card',
-    '#braslet-card',
-    '#tshirt-card',
-    '#noski-card',
-    '#z-card',
-    '#plastinka-card',
-  ];
-
-  cardIds.forEach((id) => {
-    const el = document.querySelector(id);
-    if (el) {
-      el.classList.add('shake');
-    }
-  });
-});
 
 //
 //

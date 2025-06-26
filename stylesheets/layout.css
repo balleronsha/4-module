@@ -1,7 +1,11 @@
 /* * {
   outline: 1px solid red;
 } */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   background-color: #f6f6f6;
   font-family: 'Helvetica Neue';
@@ -121,6 +125,12 @@ svg {
   stroke: #1c1c1c;
   stroke-width: 6vw;
   paint-order: stroke;
+  transition: transform 0.4s ease, fill 0.4s ease;
+  transform-origin: center;
+}
+.glav-svg text:hover {
+  fill: #ff2c73;
+  transform: scale(1.3);
 }
 .menu-buttons {
   display: flex;
@@ -721,12 +731,12 @@ svg {
   color: #000;
   text-align: left;
   font-size: 1.464vw;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   font-family: 'Helvetica Neue';
 }
 .input-field::placeholder {
-  color: #000;
+  color: #8b8b8b;
   text-align: left;
   font-size: 1.464vw;
   font-weight: 300;
@@ -785,17 +795,15 @@ svg {
 }
 .zapisatsya-btn {
   position: absolute;
-  top: 55vw;
-
-  padding: 2vw;
-  width: 30vw;
+  top: 54vw;
+  padding: 1vw;
+  width: 24vw;
   box-sizing: border-box;
-  text-align: center; /* центрируем текст внутри */
-  margin-top: 4vw;
+  text-align: center;
+  margin-top: 5vw;
   display: block;
   margin-left: auto;
   margin-right: auto;
-
   border: 0.5vw solid #9ce158;
   color: rgb(0, 0, 0);
   font-size: 2.928vw;
@@ -803,11 +811,9 @@ svg {
   position: absolute;
   font-weight: 300;
   z-index: 20;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -834,14 +840,13 @@ svg {
 }
 
 .success-message {
-  background: white;
-  padding: 4vw;
+  background: #f6f6f6;
+  padding: 3vw;
   border: 0.5vw solid #000000;
   text-align: center;
-  font-size: 2.928vw;
+  font-size: 2.4vw;
   color: #000;
   position: absolute;
-
   z-index: 20;
   letter-spacing: -2%;
   display: flex;
@@ -870,7 +875,7 @@ svg {
   color: #fff;
   bottom: -000.1vw;
   width: 100vw;
-  height: 20vw;
+  height: 17vw;
   position: absolute;
   top: 255vw;
   padding: 2vw;
@@ -905,7 +910,7 @@ svg {
   width: 100vw;
   height: 20vw;
   position: absolute;
-  top: 141vw;
+  top: 140.7vw;
   padding: 2vw;
   overflow: hidden;
 }
@@ -927,7 +932,7 @@ svg {
   width: 100vw;
   height: 20vw;
   position: absolute;
-  top: 70.6vw;
+  top: 70vw;
   padding: 2vw;
   overflow: hidden;
 }
@@ -939,15 +944,21 @@ svg {
   justify-content: space-between;
   gap: 20px;
 }
-
-/* Меню в столбик */
-.footer-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.footer-nav1 {
+  position: absolute;
 }
-
-.footer-nav li {
+.footer-nav2 {
+  left: 13vw;
+  position: absolute;
+}
+.footer-nav1 li {
+  display: flex;
+  flex-direction: column; /* вот это делает колонки */
+  gap: 10px; /* отступы между элементами, по желанию */
+  align-items: center; /* выравнивание по центру по горизонтали */
+  margin-bottom: 12px;
+}
+.footer-nav2 li {
   display: flex;
   flex-direction: column; /* вот это делает колонки */
   gap: 10px; /* отступы между элементами, по желанию */
@@ -955,11 +966,12 @@ svg {
   margin-bottom: 12px;
 }
 
-.footer-nav a {
+.footer-nav1 a,
+.footer-nav2 a {
   padding: 0.3vw;
   display: flex;
-  flex-direction: column; /* вот это делает колонки */
-  gap: 1vw; /* отступы между элементами, по желанию */
+  flex-direction: column;
+  gap: 1vw;
   font-family: 'Helvetica Neue';
   font-style: italic;
   color: #fff;
@@ -969,39 +981,22 @@ svg {
   transition: color 0.3s ease;
 }
 
-.footer-nav a:hover {
-  color: #9ce158; /* зеленый акцент */
+.footer-nav1 a:hover,
+.footer-nav2 a:hover {
+  color: #9ce158;
 }
 .footer-text {
   position: absolute;
-  top: 15vw;
-  flex-direction: column; /* вот это делает колонки */
-  gap: 1vw; /* отступы между элементами, по желанию */
+  top: 9vw;
+  gap: 1vw;
   font-family: 'Helvetica Neue';
   color: #fff;
-  text-decoration: none;
-
   font-size: 1.318vw;
 }
-/* Соцсеть */
-.footer-social {
-  margin-top: 20px;
-}
 
-.telegram-icon {
-  width: 32px;
-  height: 32px;
-  filter: invert(100%);
-  transition: filter 0.3s ease;
-}
-
-.telegram-icon:hover {
-  filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(150deg);
-  cursor: pointer;
-}
 #paint {
-  width: 80vw;
-  height: 80vw;
+  width: 50vw;
+  height: 50vw;
   overflow: hidden;
   position: absolute;
   top: 1vw;
@@ -1010,11 +1005,13 @@ svg {
 }
 
 #funny-bug {
+  width: 28.187vw;
+  height: 15.401vw;
+  left: 6vw;
   object-fit: contain;
   transition: transform 0.3s ease;
   cursor: pointer;
   position: absolute;
-  top: 2vw;
 }
 
 #speech-bubble {
@@ -1430,10 +1427,10 @@ svg {
   position: absolute;
 }
 #braslet {
-  left: 5.5vw;
-  width: 22.474vw;
-  height: 15.373vw;
-  top: 20.202vw;
+  left: -5vw;
+  width: 40.474vw;
+  height: 32.373vw;
+  top: 14.202vw;
   position: absolute;
 }
 .brasletwhat {
@@ -1514,11 +1511,11 @@ svg {
   position: absolute;
 }
 #znach {
-  height: 23.84vw;
-  width: 22.742vw;
+  width: 24.452vw;
+  height: 22.843vw;
   position: absolute;
-  top: 10vw;
-  left: 5vw;
+  top: 8vw;
+  left: 4vw;
 }
 .znachwhat {
   font-size: 1.83vw;
@@ -1628,11 +1625,11 @@ img.rotate-hover {
   left: 2vw;
 }
 #braslet-card {
-  width: 27.965vw;
-  height: 19.169vw;
+  left: -3vw;
+  width: 40.474vw;
+  height: 32.373vw;
+  top: 12.202vw;
   position: absolute;
-  top: 14vw;
-  left: 6vw;
 }
 #tshirt-card {
   width: 37.701vw;
@@ -1649,11 +1646,11 @@ img.rotate-hover {
   left: 5vw;
 }
 #z-card {
-  width: 27.452vw;
+  width: 30.452vw;
   height: 28.843vw;
   position: absolute;
-  top: 8vw;
-  left: 5vw;
+  top: 9vw;
+  left: 4.5vw;
 }
 #plastinka-card {
   width: 40.776vw;
@@ -1710,6 +1707,15 @@ img.rotate-hover {
   position: absolute;
   top: 20.5vw;
   left: 58.221vw;
+}
+.bubikzel11 {
+  border-radius: 100%;
+  width: 3.294vw;
+  height: 3.294vw;
+  background-color: #9ce158;
+  position: absolute;
+  top: 20.5vw;
+  left: 53.221vw;
 }
 .bubikroz2 {
   border-radius: 100%;
@@ -2039,8 +2045,8 @@ img.rotate-hover {
 
 /* 2 ДИВЧИК */
 #love {
-  left: 33.309vw;
-  width: 33.309vw;
+  left: 33vw;
+  width: 34.2vw;
   height: 38.067vw;
   border-right: 0.3vw solid #000;
   border-left: 0.3vw solid #000;
@@ -2088,7 +2094,7 @@ img.rotate-hover {
 }
 /* 4 ДИВЧИК */
 #chocopie {
-  top: 38.3vw;
+  top: 38vw;
   width: 33.309vw;
   height: 32.067vw;
   border-right: 0.3vw solid #000;
@@ -2112,9 +2118,9 @@ img.rotate-hover {
 }
 /* 5 ДИВЧИК */
 #pirat {
-  top: 38.3vw;
-  left: 33.309vw;
-  width: 33.309vw;
+  top: 38vw;
+  left: 33vw;
+  width: 34.2vw;
   height: 32.067vw;
   border-right: 0.3vw solid #000;
   border-left: 0.3vw solid #000;
@@ -2138,7 +2144,7 @@ img.rotate-hover {
 }
 /* 6 ДИВЧИК */
 #sugar {
-  top: 38.3vw;
+  top: 38vw;
   left: 66.9vw;
   width: 33.309vw;
   height: 32.067vw;

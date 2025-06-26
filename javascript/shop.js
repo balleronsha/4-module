@@ -8,6 +8,16 @@ function toggleMenu() {
   menu.classList.toggle('show');
 }
 //
+document.addEventListener('DOMContentLoaded', () => {
+  const logo = document.querySelector('.logo');
+  if (logo) {
+    logo.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.location.href = 'index.html';
+    });
+  }
+});
+
 //
 //
 //

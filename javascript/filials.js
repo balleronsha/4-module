@@ -52,6 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
       saySomething();
     });
   });
+  document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.querySelector('.logo');
+    if (logo) {
+      logo.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = 'index.html';
+      });
+    }
+  });
 
   // Слайдер
   const track = document.querySelector('.slider-track');

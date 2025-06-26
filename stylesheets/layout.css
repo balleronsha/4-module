@@ -2308,7 +2308,6 @@ img.rotate-hover {
 /*  */
 /*  */
 /*  */
-/* */
 /*  */
 /*  */
 /*  */
@@ -3304,4 +3303,92 @@ img.rotate-hover {
   width: 47.291vw;
   height: 26.501vw;
   overflow: hidden;
+}
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/* НЕНАВИСТНАЯ ОШИБКАА 404 */
+.p456 {
+  overflow: hidden;
+}
+.zagl404 {
+  position: absolute;
+  left: 23vw;
+  top: 14.817vw;
+  width: 43vw;
+  height: auto;
+  overflow: visible;
+}
+
+.zagl404 text {
+  font-weight: bold;
+  fill: #ffffff;
+  stroke: #000000;
+  stroke-width: 0.6vw;
+  paint-order: stroke;
+  font-size: 2.8vw;
+  overflow: visible;
+}
+.podpis404 {
+  position: absolute;
+  left: 41vw;
+  top: 34.817vw;
+  width: 43vw;
+  height: auto;
+  overflow: visible;
+}
+
+.podpis404 text {
+  font-weight: bold;
+  fill: #ffffff;
+  stroke: #ff2c73;
+  stroke-width: 0.6vw;
+  paint-order: stroke;
+  font-size: 2.8vw;
+  overflow: visible;
+}
+.home-button {
+  display: inline-block;
+  padding: 2vw;
+  background-color: #f6f6f6; /* зелёный */
+  color: black;
+  text-decoration: none;
+  font-size: 2.928vw;
+  border: 0.3vw solid #000;
+  position: absolute;
+  top: 43vw;
+  left: 32vw;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #9ce158; /* темнее при наведении */
 }

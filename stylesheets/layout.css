@@ -374,7 +374,9 @@ svg {
   left: 15.9vw;
   top: 95vw;
   width: 7.247vw;
+  height: 10.249vw;
   background-image: url('../images/sprite1.svg');
+  background-size: 72.47vw;
   background-repeat: no-repeat;
   background-position: 0 0;
   animation: play 1s steps(10) infinite;

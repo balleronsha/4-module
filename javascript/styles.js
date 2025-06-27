@@ -122,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
           const image = document.getElementById(images[i]);
           if (modal) modal.style.display = 'none';
           if (image) {
-            // Возвращаем исходный src без "pink"
             image.src = image.src.replace(/pink\.svg$/, '.svg');
           }
         });
@@ -132,7 +131,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Закрытие по клику на крестик с классом flow
   document.querySelectorAll('.flow').forEach((btn) => {
     btn.addEventListener('click', () => {
       const parentModal = btn.closest('[id^="skuchno"]');

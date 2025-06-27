@@ -223,9 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     posters.forEach((poster) => {
       poster.style.transition = 'transform 1s ease-in-out';
-      poster.style.transform = ''; // вернётся к оригинальному стилю CSS
+      poster.style.transform = '';
     });
-  }, 100); // маленькая задержка, чтобы браузер применил первое состояние
+  }, 100);
 });
 document.addEventListener('DOMContentLoaded', () => {
   if (window.innerWidth <= 800) {

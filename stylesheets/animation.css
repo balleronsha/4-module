@@ -8,6 +8,34 @@
     transform: rotate(360deg);
   }
 }
+/* Анимация прыжка */
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* Анимация шевеления */
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(15deg) translateX(0.3vw);
+  }
+  50% {
+    transform: rotate(30deg) translateX(-0.3vw);
+  }
+  75% {
+    transform: rotate(15deg) translateX(0.3vw);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0vw);
+  }
+}
 .icon1:hover,
 .icon2:hover,
 .icon3:hover,

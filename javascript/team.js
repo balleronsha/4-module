@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialLeftPx = parseFloat(style.left);
 
   const vw = window.innerWidth / 100;
-  const deltaTop = -60 * vw; // вверх на 40vw (редактируй здесь)
-  const deltaLeft = 40 * vw; // вправо на 40vw (редактируй здесь)
+  const deltaTop = -60 * vw;
+  const deltaLeft = 40 * vw;
   const duration = 2000;
 
   let animationTimeout = null;
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const initialLeftPx = parseFloat(style.left);
 
   const vw = window.innerWidth / 100;
-  const deltaTop = -50 * vw; // вверх
+  const deltaTop = -50 * vw;
   const duration = 2000;
 
   let animationTimeout = null;

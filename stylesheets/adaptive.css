@@ -1404,23 +1404,30 @@
     font-size: 6vw;
   }
   /* мои барыги */
+  /* Карточки в столбик */
   .prepod1,
   .prepod2,
   .prepod3,
   .prepod4,
   .prepod5,
   .prepod6 {
-    position: static !important; /* Сбрасываем абсолют */
-    width: 90vw !important;
+    display: none;
+    position: static !important;
+    width: 100% !important;
     height: auto !important;
-    margin: 5vw auto;
-    display: block;
-    perspective: 1000px;
+    margin: 20px 0;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start; /* текст и элементы прижаты влево */
+    perspective: none;
+    box-sizing: border-box;
+    padding: 12vw;
   }
 
   .card-inner {
     width: 100%;
     height: 100%;
+    display: block;
   }
 
   .front1,
@@ -1437,13 +1444,15 @@
   .prepod6-back {
     width: 100% !important;
     height: auto !important;
-    border-width: 1vw;
+    border-width: 1px;
+    box-sizing: border-box;
   }
 
   .tvar-wrapper {
     width: 100%;
     height: auto;
     position: relative;
+    display: block;
   }
 
   #tvar1,
@@ -1459,6 +1468,7 @@
     left: auto !important;
   }
 
+  /* Описание, клички, подписи — по левому краю */
   .klichka1,
   .klichka2,
   .klichka3,
@@ -1480,9 +1490,9 @@
     position: relative !important;
     left: auto !important;
     top: auto !important;
-    font-size: 4vw !important;
-    margin: 2vw 0;
-    text-align: center;
+    font-size: 5vw !important;
+    margin: 5px 0;
+    text-align: left !important;
   }
 }
 

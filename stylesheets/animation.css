@@ -281,5 +281,13 @@
 .lecpro:hover,
 .prudpro:hover,
 .lugpro:hover {
-  transform: scale(1.3);
+  transform: scale(1.07);
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-51%); /* чуть больше 50%, чтобы компенсировать */
+  }
 }

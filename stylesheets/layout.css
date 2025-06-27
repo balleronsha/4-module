@@ -899,29 +899,29 @@ svg {
   width: 100vw;
   height: 20vw;
   position: absolute;
-  top: 57vw;
+  top: 210vw;
   padding: 2vw;
   overflow: hidden;
 }
-.footerfil2 {
+.footerfil10 {
   background-color: #1c1c1c;
   color: #fff;
   bottom: -000.1vw;
   width: 100vw;
   height: 20vw;
   position: absolute;
-  top: 57vw;
+  top: 210vw;
   padding: 2vw;
   overflow: hidden;
 }
-.footerfil3 {
+.footerfil109 {
   background-color: #1c1c1c;
   color: #fff;
   bottom: -000.1vw;
   width: 100vw;
   height: 20vw;
   position: absolute;
-  top: 57vw;
+  top: 210vw;
   padding: 2vw;
   overflow: hidden;
 }
@@ -986,16 +986,16 @@ svg {
 }
 .footer-nav1 li {
   display: flex;
-  flex-direction: column; /* вот это делает колонки */
-  gap: 10px; /* отступы между элементами, по желанию */
-  align-items: center; /* выравнивание по центру по горизонтали */
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
   margin-bottom: 12px;
 }
 .footer-nav2 li {
   display: flex;
-  flex-direction: column; /* вот это делает колонки */
-  gap: 10px; /* отступы между элементами, по желанию */
-  align-items: center; /* выравнивание по центру по горизонтали */
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
   margin-bottom: 12px;
 }
 
@@ -1321,24 +1321,12 @@ svg {
   box-shadow: 0 0 rgba(0, 0, 0, 0.5);
   font-family: 'Helvetica Neue', sans-serif;
 }
-/* .modal-content {
-  background-color: #f6f6f6;
-  padding: 2vw;
-  border: 0.4vw solid #000000;
-  max-width: 800px;
-  width: 90%;
-  box-sizing: border-box;
-  position: relative;
-  box-shadow: 0 0 2vw rgba(0, 0, 0, 0.5);
-  font-family: 'Helvetica Neue', sans-serif;
-}
- */
 
 .modal-content p {
   padding: 0.3vw;
   display: flex;
-  flex-direction: column; /* вот это делает колонки */
-  gap: 1vw; /* отступы между элементами, по желанию */
+  flex-direction: column;
+  gap: 1vw;
   font-family: 'Helvetica Neue';
   color: #000000;
   text-decoration: none;
@@ -2349,9 +2337,8 @@ img.rotate-hover {
   width: 28.917vw;
   perspective: 1000px;
   cursor: pointer;
-  /* border: 0.3vw solid #000; */
-  background: transparent; /* фон у .prepod1 не нужен */
-  overflow: visible; /* чтобы содержимое не обрезалось */
+  background: transparent;
+  overflow: visible;
 }
 .card-inner {
   position: relative;
@@ -3019,7 +3006,7 @@ img.rotate-hover {
   display: block;
   opacity: 1;
   width: 100vw;
-  height: 210vw;
+  height: 228vw;
   z-index: 100;
 }
 .prud-desc {
@@ -3036,7 +3023,7 @@ img.rotate-hover {
   display: block;
   opacity: 1;
   width: 100vw;
-  height: 210vw;
+  height: 228vw;
   z-index: 100;
 }
 .lug-desc {
@@ -3053,10 +3040,12 @@ img.rotate-hover {
   display: block;
   opacity: 1;
   width: 100vw;
-  height: 210vw;
+  height: 228vw;
   z-index: 100;
 }
-.big1 {
+.big1,
+.big10,
+.big109 {
   width: 100vw;
   height: 56.076vw;
   object-fit: cover;
@@ -3065,7 +3054,9 @@ img.rotate-hover {
 }
 
 /* Текст и кнопка внутри описания */
-.glavnayakakashka {
+.glavnayakakashka,
+.glavnayakakashka0,
+.glavnayakakashka09 {
   font-size: 4.392vw;
   font-weight: bold;
   position: absolute;
@@ -3074,7 +3065,9 @@ img.rotate-hover {
   color: #ffffff;
 }
 
-.milo {
+.milo,
+.milo0,
+.milo09 {
   font-size: 1.464vw;
   position: absolute;
   color: #ffffff;
@@ -3082,7 +3075,9 @@ img.rotate-hover {
   left: 3vw;
 }
 
-#close-desc {
+#close-desc,
+#close-desc0,
+#close-desc09 {
   top: 8vw;
   left: 94vw;
   position: absolute;
@@ -3101,7 +3096,9 @@ img.rotate-hover {
 }
 
 /* Бегущая строка */
-.runsrk1 {
+.runsrk1,
+.runsrk10,
+.runsrk109 {
   top: 57vw;
   position: absolute;
   white-space: nowrap;
@@ -3115,7 +3112,9 @@ img.rotate-hover {
   animation: scroll-left 4s linear infinite;
 }
 
-.runsrk1::after {
+.runsrk1::after,
+.runsrk10::after,
+.runsrk109::after {
   content: attr(data-text);
   position: absolute;
   white-space: nowrap;
@@ -3127,15 +3126,9 @@ img.rotate-hover {
   color: #1c1c1c;
 }
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-51%); /* чуть больше 50%, чтобы компенсировать */
-  }
-}
-.boshkabolitsilno {
+.boshkabolitsilno,
+.boshkabolitsilno0,
+.boshkabolitsilno09 {
   font-size: 4.392vw;
   font-weight: bold;
   position: absolute;
@@ -3143,7 +3136,9 @@ img.rotate-hover {
   left: 1.7vw;
   color: #1c1c1c;
 }
-.sonrevet {
+.sonrevet,
+.sonrevet0,
+.sonrevet09 {
   font-size: 4.392vw;
   font-weight: bold;
   position: absolute;
@@ -3151,7 +3146,9 @@ img.rotate-hover {
   left: 1.7vw;
   color: #1c1c1c;
 }
-.povar {
+.povar,
+.povar0,
+.povar09 {
   font-size: 4.392vw;
   font-weight: bold;
   position: absolute;
@@ -3159,21 +3156,27 @@ img.rotate-hover {
   left: 1.7vw;
   color: #1c1c1c;
 }
-.depresion {
+.depresion,
+.depresion0,
+.depresion09 {
   font-size: 1.464vw;
   position: absolute;
   color: #000000;
   top: 138vw;
   left: 1.7vw;
 }
-.kartina {
+.kartina,
+.kartina0,
+.kartina09 {
   font-size: 1.464vw;
   position: absolute;
   color: #000000;
   top: 171vw;
   left: 1.7vw;
 }
-.kover {
+.kover,
+.kover0,
+.kover09 {
   font-size: 1.464vw;
   position: absolute;
   color: #000000;
@@ -3183,13 +3186,23 @@ img.rotate-hover {
 .zal1,
 .zal2,
 .zal3,
-.zal4 {
+.zal4,
+.zal10,
+.zal20,
+.zal30,
+.zal40,
+.zal091,
+.zal209,
+.zal309,
+.zal409 {
   width: 47.291vw;
   height: 26.501vw;
   position: absolute;
 }
 
-.image-container1 {
+.image-container1,
+.image-container10,
+.image-container109 {
   position: relative;
   display: inline-block;
   top: 17vw;
@@ -3198,7 +3211,9 @@ img.rotate-hover {
   height: 26.501vw;
   overflow: hidden;
 }
-.image-container2 {
+.image-container2,
+.image-container20,
+.image-container209 {
   position: relative;
   display: inline-block;
   top: 17vw;
@@ -3207,7 +3222,9 @@ img.rotate-hover {
   height: 26.501vw;
   overflow: hidden;
 }
-.image-container3 {
+.image-container3,
+.image-container30,
+.image-container309 {
   position: relative;
   display: inline-block;
   top: 18vw;
@@ -3216,7 +3233,9 @@ img.rotate-hover {
   height: 26.501vw;
   overflow: hidden;
 }
-.image-container4 {
+.image-container4,
+.image-container40,
+.image-container409 {
   position: relative;
   display: inline-block;
   top: 18vw;
@@ -3228,7 +3247,15 @@ img.rotate-hover {
 .image-container1 img,
 .image-container2 img,
 .image-container3 img,
-.image-container4 img {
+.image-container4 img,
+.image-container10 img,
+.image-container20 img,
+.image-container30 img,
+.image-container40 img,
+.image-container109 img,
+.image-container209 img,
+.image-container309 img,
+.image-container409 img {
   display: block;
   width: 100%;
   height: 100%;
@@ -3238,7 +3265,15 @@ img.rotate-hover {
 .image-container1 p,
 .image-container2 p,
 .image-container3 p,
-.image-container4 p {
+.image-container4 p,
+.image-container10 p,
+.image-container20 p,
+.image-container30 p,
+.image-container40 p,
+.image-container109 p,
+.image-container209 p,
+.image-container309 p,
+.image-container409 p {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -3260,11 +3295,21 @@ img.rotate-hover {
 .image-container1:hover p,
 .image-container2:hover p,
 .image-container3:hover p,
-.image-container4:hover p {
+.image-container4:hover p,
+.image-container10:hover p,
+.image-container20:hover p,
+.image-container30:hover p,
+.image-container40:hover p,
+.image-container109:hover p,
+.image-container209:hover p,
+.image-container309:hover p,
+.image-container409:hover p {
   opacity: 1;
   transform: translateY(0);
 }
-.autoslide-container {
+.autoslide-container,
+.autoslide-container0,
+.autoslide-container09 {
   width: 47.291vw;
   height: 26.501vw;
   position: relative;
@@ -3274,7 +3319,9 @@ img.rotate-hover {
   top: 22vw;
   left: 51.2vw;
 }
-.autoslide {
+.autoslide,
+.autoslide0,
+.autoslide09 {
   width: 47.291vw;
   height: 26.501vw;
   width: 100%;
@@ -3283,10 +3330,14 @@ img.rotate-hover {
   transition: opacity 1s ease-in-out;
   opacity: 1;
 }
-#autoslide-image {
+#autoslide-image,
+#autoslide-image0,
+#autoslide-image09 {
   width: 47.291vw;
 }
-.chena1 {
+.chena1,
+.chena10,
+.chena109 {
   position: relative;
   display: inline-block;
   top: 42vw;
@@ -3295,7 +3346,9 @@ img.rotate-hover {
   height: 26.501vw;
   overflow: hidden;
 }
-.chena2 {
+.chena2,
+.chena20,
+.chena209 {
   position: relative;
   display: inline-block;
   top: 42vw;
@@ -3308,6 +3361,7 @@ img.rotate-hover {
 /*  */
 /*  */
 /*  */
+
 /*  */
 /*  */
 /*  */

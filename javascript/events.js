@@ -227,3 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, 100); // маленькая задержка, чтобы браузер применил первое состояние
 });
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth <= 800) {
+    const teamLinks = document.querySelectorAll('a[href*="team.html"]');
+    teamLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Страница "Команда" доступна только на компьютере 🐞');
+      });
+    });
+  }
+});

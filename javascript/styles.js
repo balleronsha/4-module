@@ -97,48 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 //
 //
-// смена изображения
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const blocks = ['pila', 'love', 'kust', 'chocopie', 'pirat', 'sugar'];
-//   const xoxoIds = ['xoxo1', 'xoxo2', 'xoxo3', 'xoxo4', 'xoxo5', 'xoxo6'];
-//   const skuchnoIds = [
-//     'skuchno1',
-//     'skuchno2',
-//     'skuchno3',
-//     'skuchno4',
-//     'skuchno5',
-//     'skuchno6',
-//   ];
-
-//   blocks.forEach((blockId, index) => {
-//     const block = document.getElementById(blockId);
-//     const xoxoImg = document.getElementById(xoxoIds[index]);
-//     const skuchno = document.getElementById(skuchnoIds[index]);
-
-//     if (!block || !xoxoImg || !skuchno) return;
-//     block.addEventListener('click', () => {
-//       skuchno.style.display = 'block';
-
-//       const src = xoxoImg.getAttribute('src');
-//       const filename = src.split('/').pop().replace('.svg', '');
-//       if (!filename.toLowerCase().includes('pink')) {
-//         const pinkSrc = `images/${filename}pink.svg`;
-//         xoxoImg.setAttribute('src', pinkSrc);
-//       }
-//     });
-//     const closeBtn = skuchno.querySelector('.flow');
-//     if (closeBtn) {
-//       closeBtn.addEventListener('click', () => {
-//         skuchno.style.display = 'none';
-
-//         const pinkSrc = xoxoImg.getAttribute('src');
-//         const originalSrc = pinkSrc.replace('pink.svg', '.svg');
-//         xoxoImg.setAttribute('src', originalSrc);
-//       });
-//     }
-//   });
-// });
 //
 //
 document.addEventListener('DOMContentLoaded', () => {
@@ -242,4 +200,15 @@ document.addEventListener('DOMContentLoaded', () => {
     doFunnyAnimation();
     saySomething();
   });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth <= 800) {
+    const teamLinks = document.querySelectorAll('a[href*="team.html"]');
+    teamLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Страница "Команда" доступна только на компьютере 🐞');
+      });
+    });
+  }
 });

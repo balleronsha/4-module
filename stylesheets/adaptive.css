@@ -411,6 +411,11 @@
     height: 39vw;
     top: 250vw;
   }
+  .footerteam {
+    width: 100vw;
+    height: 39vw;
+    top: 500vw;
+  }
   .footer-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1412,10 +1417,10 @@
   .prepod5,
   .prepod6 {
     display: none;
-    position: static !important;
+    position: absolute !important;
     width: 100% !important;
     height: auto !important;
-    margin: 20px 0;
+    left: 0vw;
     display: flex !important;
     flex-direction: column;
     align-items: flex-start; /* текст и элементы прижаты влево */
@@ -1423,7 +1428,12 @@
     box-sizing: border-box;
     padding: 12vw;
   }
-
+  .prepod1 {
+    top: 120vw;
+  }
+  .prepod6 {
+    top: 700vw;
+  }
   .card-inner {
     width: 100%;
     height: 100%;

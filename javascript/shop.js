@@ -106,24 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 //
 
-// //  Функция закрытия карточки
-// function closeCard(id) {
-//   const card = document.getElementById(id);
-//   const footer = document.querySelector('.footershop');
-
-//   if (card) {
-//     card.style.display = 'none';
-//     document.body.classList.remove('no-scroll');
-//     if (footer) footer.style.display = 'block';
-//   }
-// }
-
-//
-//
-//
-//
-//
-//
 //
 //
 // МЕНЯЛКА ИЗОБРАЖЕНИЯ С СУМОЧКОЙ
@@ -230,4 +212,15 @@ document.addEventListener('DOMContentLoaded', () => {
     doFunnyAnimation();
     saySomething();
   });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.innerWidth <= 800) {
+    const teamLinks = document.querySelectorAll('a[href*="team.html"]');
+    teamLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Страница "Команда" доступна только на компьютере 🐞');
+      });
+    });
+  }
 });
